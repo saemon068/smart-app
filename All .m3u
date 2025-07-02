@@ -157,16 +157,6 @@ https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8
 https://unifi-live05.secureswiftcontent.com/UnifiHD/live27-1080FHD.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Football", ESPN FIFA CWC 
 http://38.96.178.201/live/ESPNHD/index.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Football",Bein Sports 1
-http://125x.org:8080/bn1hd/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Football",Bein Sports 2
-http://125x.org:8080/bn2hd/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Football",Bein Sports 3
-http://125x.org:8080/bn3hd/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Football",Bein Sports 4
-http://125x.org:8080/bn4hd/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Football",Bein Sports 6
-http://125x.org:8080/bn6hd/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Football",Sport italia
 https://di-kzbhv8pw.vo.lswcdn.net/sportitalia/sisolocalcio.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Football",Sport Italia
