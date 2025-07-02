@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://shorturl.at/3O3VS", T Sports 
+http://38.96.178.201/live/TSports/index.m3u8
+https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://stvlive.net:8080/tsports1/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/16-by-xfireflix.png", Star Sports 1
 https://d3.merichunidya.com:1686/hls/star1in.m3u8?md5=jY3BYZIaToZndxI9n02W6g&expires=1751480508
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/1-by-xfireflix.png", Star Sports 1 Hindi
@@ -25,8 +28,6 @@ https://d2.merichunidya.com:1686/hls/bbtsp2.m3u8?md5=HZBzKN0KtjALXC5iejBrww&expi
 https://d1.merichunidya.com:1686/hls/bbtsp3.m3u8?md5=xWLDFNGD4tsD1_Yg77AVxA&expires=1751480509
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 4
 https://d1.merichunidya.com:1686/hls/bbtespn.m3u8?md5=ELP3jtbi19HFxs9hyL-qaw&expires=1751480509
-#EXTINF:-1 tvg-logo="https://shorturl.at/3O3VS", T Sports 
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://stvlive.net:8080/tsports1/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/56-by-xfireflix.png", Sky Sports 2
 https://d1.merichunidya.com:1686/hls/sky2nz.m3u8?md5=BIWNvTfhTpAfHmLOrm2-Hw&expires=1751480509
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/56-by-xfireflix.png", Sky Sports 3
