@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAZYSPORTS</title> <!-- Updated Title -->
+
+    <!-- 1. Plyr.io CSS for player styling -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+    <!-- Optional: Font Awesome or other icon library if you prefer graphical icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --theme-color-pink: #e83d84; /* Pinkish Red */
+            --theme-color-purple: #a436a0; /* Purple/Violet - Theme color */
+            --plyr-color-main: var(--theme-color-pink); /* Customizing Plyr color to match theme */
+            --button-size-large: 45px;
+            --button-size-medium: 40px;
+            --button-icon-large: 1.6rem; /* Size for Close */
+            --button-icon-medium: 1.4rem;
+            --button-icon-small: 1.2rem;
+            /* Removed nav icon sizes */
+            --player-button-bg: rgba(0, 0, 0, 0.5); /* Semi-transparent black for controls */
+            --player-button-bg-hover: rgba(0, 0, 0, 0.7);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #000000; font-family: Arial, sans-serif; color: #ffffff; }
+
+        /* --- Header --- */
+        .top-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; background-color: #0d0d0d; border-top: 4px solid var(--theme-color-purple); flex-wrap: wrap; gap: 10px; /* Added gap for wrapping */ }
+        .logo-container { display: flex; align-items: center; }
+        /* Updated logo URL and SIZE */
+        .logo-container img {
+             width: 150px; /* Increased base size */
+             height: auto; /* Maintain aspect ratio */
+             margin-right: 10px;
+        }
+        .logo-container span { font-weight: bold; color: #cccccc; }
+        .search-container { display: flex; align-items: center; flex-grow: 1; max-width: 400px; /* Limit search width on larger screens */ } /* Added flex-grow */
+        .search-container input { background-color: #222; border: 1px solid #444; border-radius: 20px; padding: 8px 15px; color: #fff; width: 100%; /* Make input take available space */ margin-right: 10px; }
+        .search-container button { background-color: var(--theme-color-pink); border: none; border-radius: 20px; padding: 8px 20px; color: #fff; font-weight: bold; cursor: pointer; flex-shrink: 0; /* Prevent button from shrinking */ } /* Added flex-shrink */
+         .search-container button:hover { background-color: #f0589e; }
+
+
+        /* --- Channel Grid --- */
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 30px;
+            justify-content: center; /* Center items if not filling grid */
+        }
+        .channel-card {
+            background-color: #111111;
+            border: 2px solid var(--theme-color-pink); /* Channel card border color */
+            border-radius: 15px;
+            padding: 15px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #cccccc;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevent content overflow */
+        }
+        .channel-card:hover { transform: scale(1.05); }
+        .channel-logo-wrapper { background-color: #ffffff; width: 90px; height: 90px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; overflow: hidden; }
+        .channel-logo-wrapper img { max-width: 80%; max-height: 80%; object-fit: contain; }
+        .channel-name { font-size: 14px; font-weight: bold; word-break: break-word; /* Break long names */ }
+
+
+        /* Loading message style (optional) */
+        #loading-message {
+            text-align: center;
+            padding: 50px;
+            color: var(--theme-color-purple);
+            grid-column: 1 / -1; /* Span across all columns in grid */
+        }
+
+         /* Error message style (optional) */
+        #error-message {
+            text-align: center;
+            padding: 50px;
+            color: red;
+            grid-column: 1 / -1; /* Span across all columns in grid */
+            display: none; /* Hidden by default */
+        }
+        /* No results message style */
+        #no-results-message {
+             text-align: center;
+             padding: 50px;
+             color: #cccccc;
+             grid-column: 1 / -1;
+             display: none; /* Hidden by default */
+        }
+
+
+        /* --- Full Screen Video Player Overlay --- */
+        #video-player-overlay {
+            display: none; /* Hidden by default */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #000;
+            z-index: 1000;
+            justify-content: center; align-items: center; /* Center player container */
+        }
+
+        #player-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Needed for absolute positioning of text, close button, and no signal image */
+            /* Add cursor styles to indicate swipe-ability */
+            cursor: grab;
+        }
+         #player-container:active { cursor: grabbing; } /* Change cursor while dragging */
+
+
+        #video-player {
+             width: 100%;
+             height: 100%;
+             object-fit: contain; /* Use 'contain' to see the whole video without cropping */
+             /* object-fit: cover; /* Use 'cover' to fill the screen, potentially cropping video edges */
+             display: block; /* Default display */
+        }
+
+        /* Plyr Container adjustments */
+         /* Ensure Plyr container takes full space within the overlay */
+        .plyr {
+             width: 100%;
+             height: 100%;
+        }
+         /* Ensure video inside Plyr takes full space within its container */
+        .plyr video {
+             width: 100%;
+             height: 100%;
+        }
+
+        /* --- No Signal Image --- */
+        #no-signal-image {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure the image fits well */
+            z-index: 1; /* Below controls/text, above background */
+            display: none; /* Hidden by default */
+             pointer-events: none; /* Allow swipes/clicks to pass through the image area */
+        }
+
+
+         /* "by S.A.Emon" text overlay */
+        #custom-player-text {
+            position: absolute;
+            top: 15px; /* Position below close button */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+            font-size: 12px;
+            z-index: 1001; /* Above video/image, below close button */
+            pointer-events: none; /* Allow clicks to pass through */
+            transition: opacity 0.3s ease; /* Add transition for fade */
+        }
+
+
+         /* Player Error Message Styling (for text errors on top) */
+         #player-error-message {
+            display: none; /* Hidden by default */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.9); /* Darker background for readability */
+            border-radius: 10px;
+            z-index: 1002; /* Above the video element, no signal image, and custom text */
+            max-width: 90%; /* Adjust width */
+            position: absolute; /* Position over the video area */
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+            font-size: 1rem;
+             pointer-events: auto !important; /* Ensure clickable even if container has pointer-events: none */
+         }
+
+
+        /* --- Top Corner Button (Close) --- */
+        #close-player-btn {
+            position: absolute;
+            color: white;
+            border-radius: 50%;
+            width: var(--button-size-large);
+            height: var(--button-size-large);
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1003; /* Ensure button is highest */
+            line-height: var(--button-size-large); /* Match height for vertical alignment */
+            text-align: center;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: opacity 0.3s ease, background-color 0.2s ease; /* Add opacity transition */
+            /* Default state controlled by .controls-hidden/not(.controls-hidden) */
+             background-color: var(--player-button-bg); /* Semi-transparent black */
+             font-size: var(--button-icon-large);
+             top: 15px; /* Position it */
+             right: 20px; /* Position it */
+             pointer-events: auto; /* Default enabled */
+        }
+
+        #close-player-btn:hover {
+             background-color: rgba(255,255,255,0.2); /* Lighten on hover */
+        }
+         #close-player-btn:active { transform: scale(0.95); } /* Click feedback */
+
+
+        /* Removed Channel Navigation Button styles */
+
+
+        /* --- Auto-Hide Logic (Affects Close Button and Custom Text) --- */
+        /* Targets button and text when the *overlay* has the 'controls-hidden' class */
+        /* These rules apply during normal playback when controls are idle */
+        #video-player-overlay.controls-hidden #close-player-btn,
+        #video-player-overlay.controls-hidden #custom-player-text {
+             opacity: 0; /* Start fade out */
+             pointer-events: none; /* Disable clicks when faded */
+        }
+
+        /* Ensure elements are visible and clickable when controls are NOT hidden (during normal playback) */
+        #video-player-overlay:not(.controls-hidden) #close-player-btn,
+        #video-player-overlay:not(.controls-hidden) #custom-player-text {
+             opacity: 1;
+             pointer-events: auto;
+        }
+
+        /* --- Error Active State Styles --- */
+        /* These rules apply when the .error-active class is added to the overlay */
+        #video-player-overlay.error-active #close-player-btn {
+            opacity: 1 !important; /* Force button visible */
+            pointer-events: auto !important; /* Force button interactive */
+            display: block !important; /* Ensure display block */
+        }
+
+         #video-player-overlay.error-active #custom-player-text {
+              display: none !important; /* Hide custom text during error */
+         }
+
+         #video-player-overlay.error-active #no-signal-image {
+              display: block !important; /* Show the No Signal image */
+         }
+
+         #video-player-overlay.error-active #video-player {
+              display: none !important; /* Hide the video element */
+         }
+
+          #video-player-overlay.error-active .plyr {
+               visibility: hidden !important; /* Hide the Plyr container */
+               /* Using visibility: hidden keeps its space and allows events to pass,
+                  whereas display: none would remove it from layout/events */
+          }
+
+         /* Also ensure the player-container itself is ready to receive events */
+         #video-player-overlay.error-active #player-container {
+             pointer-events: auto !important; /* Ensure container gets events */
+         }
+
+
+        /* Ensure error message is always visible when displayed, overriding hide logic */
+         #player-error-message {
+             transition: none !important; /* No transition for error */
+             opacity: 1 !important; /* Always visible when display is block */
+             pointer-events: auto !important; /* Always clickable when displayed */
+         }
+
+
+        /* --- Footer Styles --- */
+        footer {
+            text-align: center;
+            padding: 20px 0; /* Add padding top/bottom */
+            margin-top: 30px; /* Add some space above the footer */
+            background-color: #0d0d0d; /* Match header background */
+            color: #cccccc; /* Match header text color */
+            font-size: 0.9rem; /* Make text a bit smaller */
+        }
+
+        footer p {
+             margin: 0; /* Remove default paragraph margin */
+        }
+
+
+        /* Responsive Design for Close Button */
+        @media (max-width: 992px) {
+            .channel-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+            .channel-logo-wrapper { width: 80px; height: 80px; }
+             #close-player-btn {
+                 width: var(--button-size-medium);
+                 height: var(--button-size-medium);
+                 line-height: var(--button-size-medium);
+                 font-size: var(--button-icon-medium);
+                 top: 10px;
+                 right: 15px; /* Adjust position */
+             }
+             .search-container { max-width: none; } /* Allow search to grow more */
+             .logo-container img { width: 60px; /* Adjust logo size */ }
+        }
+        @media (max-width: 768px) {
+            .top-header { flex-direction: column; gap: 15px; }
+             .logo-container { width: 100%; justify-content: center;} /* Center logo on smaller screens */
+             .search-container { width: 100%; max-width: none; } /* Allow search to take full width */
+            .channel-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); padding: 20px; gap: 15px; }
+            .channel-logo-wrapper { width: 70px; height: 70px; margin-bottom: 10px; }
+            .channel-name { font-size: 13px; }
+              #close-player-btn {
+                 width: var(--button-size-small);
+                 height: var(--button-size-small);
+                 line-height: var(--button-size-small);
+                 font-size: var(--button-icon-small);
+                 top: 5px;
+                 right: 10px; /* Adjust position */
+             }
+             #custom-player-text { top: 0px; font-size: 10px;}
+             #player-error-message { padding: 15px; font-size: 0.9rem; }
+              .logo-container img { width: 50px; /* Adjust logo size */ }
+        }
+        @media (max-width: 576px) {
+            .channel-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+            .channel-logo-wrapper { width: 60px; height: 60px; }
+            .channel-name { font-size: 11px; }
+              #close-player-btn {
+                 width: 28px;
+                 height: 28px;
+                 line-height: 28px;
+                 font-size: 1rem;
+                 top: 3px;
+                 right: 5px; /* Adjust position */
+             }
+             #custom-player-text { display: none; /* Hide on very small screens */ }
+             #player-error-message { padding: 10px; font-size: 0.8rem; }
+              .logo-container img { width: 40px; /* Adjust logo size */ }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo-container">
+             <!-- Updated logo URL and Increased Size via CSS -->
+            <img src="https://lh3.googleusercontent.com/d/1mQdnkjXJ1hBwUohpWGnHadwKgZXN3yu7" alt="CRAZYSPORTS Logo" onerror="this.src='https://via.placeholder.com/70x70?text=Logo'; this.onerror=null;"> <!-- Fallback also updated -->
+            <span>     </span> <!-- Updated site title -->
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search channels...">
+            <button id="search-button" type="button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="channel-grid" id="channel-grid">
+            <!-- Channel cards will be loaded here by JavaScript from M3U -->
+            <p id="loading-message">Loading channels...</p>
+             <p id="error-message" style="display: none;"></p> <!-- For displaying general errors -->
+             <p id="no-results-message">No channels found matching your search.</p> <!-- For search results -->
+        </div>
+    </main>
+
+    <!-- Full Screen Video Player Overlay -->
+    <div id="video-player-overlay">
+         <!-- Only Close button remains -->
+        <button id="close-player-btn" onclick="closePlayer()">×</button>
+
+        <div id="player-container">
+            <video id="video-player" playsinline controls></video>
+             <!-- Added No Signal Image -->
+            <img id="no-signal-image" src="https://lh3.googleusercontent.com/d/1xDlhucbGsn2jO6qhy6KTHzjDgG9zBv_t" alt="No Signal"> <!-- Replace with your No Signal image URL -->
+
+             <!-- "by S.A.Emon" text - also within player-container -->
+             <div id="custom-player-text">by S.A.Emon</div>
+
+             <!-- Removed Channel Navigation Buttons -->
+
+             <!-- Element to display errors within the player area (kept for potential text overlay, hidden by default) -->
+            <div id="player-error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Footer added here -->
+    <footer>
+        <p>©2025 Made By S.A.Emon</p>
+    </footer>
+
+    <!-- 2. HLS.js Library (Since the M3U has HLS streams) -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- 3. Plyr.io JS Library -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+    <script>
+        // Global variables
+        let hls = null; // HLS.js instance
+        let player = null; // Plyr instance
+        let channelsList = []; // Store the original, full list of channels
+        let currentChannelIndex = -1; // Store the index of the currently playing channel from the *original* channelsList
+        let playerOverlay = null; // Reference to the player overlay element
+
+        // Variables for swipe detection
+        let startX = 0;
+        let startY = 0; // Store vertical start for axis check
+        let isSwiping = false;
+        const swipeThreshold = 70; // Minimum horizontal distance for a swipe (pixels)
+        const swipeVerticalThreshold = 50; // Maximum vertical movement allowed during a horizontal swipe
+
+
+        // URLS for the raw M3U data - ADD YOUR M3U LINKS HERE
+        // Make this an array containing all your M3U URLs
+        const M3U_URLS = [
+            'https://raw.githubusercontent.com/saemon068/smart-app/refs/heads/main/SP%20ALL.m3u',
+          
+         
+
+            // Add more M3U links here, e.g.:
+            // 'YOUR_SECOND_M3U_LINK_HERE',
+            // 'YOUR_THIRD_M3U_LINK_HERE',
+            // etc.
+        ];
+
+
+        // References to DOM elements
+        const channelGrid = document.getElementById('channel-grid');
+        const loadingMessage = document.getElementById('loading-message');
+        const mainErrorMessage = document.getElementById('error-message'); // Renamed to avoid conflict
+        const noResultsMessage = document.getElementById('no-results-message');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const playerContainer = document.getElementById('player-container'); // Reference to player container
+        const noSignalImage = document.getElementById('no-signal-image'); // Reference to no signal image
+        const closePlayerBtn = document.getElementById('close-player-btn'); // Reference to close button
+        const customPlayerText = document.getElementById('custom-player-text'); // Reference to custom text
+        const playerErrorMessageDiv = document.getElementById('player-error-message'); // Reference to player error text
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('video-player');
+            playerOverlay = document.getElementById('video-player-overlay'); // Get overlay reference
+
+            // Initialize Plyr player
+            player = new Plyr(video, {
+                captions: { active: true, update: true, language: 'en' },
+                controls: [
+                    // Include standard Plyr controls
+                    'play-large', 'play', 'progress', 'current-time', 'mute',
+                    'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'
+                ],
+                 settings: ['captions', 'quality', 'speed'], // Include quality, speed, captions in settings
+                 ratio: '16:9', // Optional: enforce aspect ratio
+                 autoplay: true, // Set autoplay true for mobile compatibility attempt
+                 disableContextMenu: true, // Disable right-click menu
+                 // Configure how long controls are visible (default is 2000ms = 2s)
+                 hideDuration: 3000, // Set to 3 seconds as requested
+                 tooltips: { controls: false, seek: true }, // Disable tooltips for control buttons if they interfere
+            });
+
+            // --- Auto-Hide/Show Custom Controls Sync ---
+            // Use Plyr's own control events to sync opacity class on the overlay
+            player.on('controlsenabled', () => {
+                 // console.log('Plyr controls enabled.');
+                 // Only remove controls-hidden if error screen is NOT active
+                 if (!playerOverlay.classList.contains('error-active')) {
+                     playerOverlay.classList.remove('controls-hidden');
+                 }
+            });
+
+             player.on('controlsdisabled', () => {
+                 // console.log('Plyr controls disabled.');
+                 // Don't add controls-hidden if error is currently active
+                 if (!playerOverlay.classList.contains('error-active')) {
+                      playerOverlay.classList.add('controls-hidden');
+                 }
+             });
+
+             // Handle player error
+             player.on('error', event => {
+                 console.error('Plyr Error:', event);
+                 let message = 'Playback error: Could not play stream.';
+                 // Check for data.fatal in HLS.js errors via event.detail.data
+                 const isFatalHls = event.detail && event.detail.data && event.detail.data.fatal;
+                 // Check for Plyr's own internal fatal errors
+                 const isFatalPlyr = event.detail && event.detail.plyr && event.detail.plyr.error && !event.detail.data; // Check if it's a Plyr error, not an HLS one passed through
+
+                 if (event.detail && event.detail.plyr && event.detail.plyr.error) {
+                      message += ` Code: ${event.detail.plyr.error.code || 'N/A'}`;
+                      if (event.detail.plyr.error.message) {
+                           message += ` - ${event.detail.plyr.error.message}`;
+                      }
+                 } else if (event.detail && event.detail.data) {
+                     const hlsErrorData = event.detail.data;
+                      message = `Stream error (${hlsErrorData.type || 'unknown'}): ${hlsErrorData.details || 'details unavailable'}.`; // Removed fatal info from user message
+                     if (hlsErrorData.fatal) {
+                         message = 'Fatal Stream Error: ' + message;
+                     } else {
+                          message = 'Stream Error: ' + message; // Indicate non-fatal stream error
+                     }
+                 }
+
+                  // Only display fatal errors visually to the user with the image
+                 if (isFatalHls || isFatalPlyr) {
+                      console.log("Fatal or unhandled error detected. Showing No Signal.");
+                      displayPlayerError(message); // Pass message for console/debug, not necessarily shown on screen
+                 } else {
+                     console.warn("Non-fatal or handled error:", message);
+                      // For non-fatal errors, HLS.js or Plyr might recover.
+                      // Don't show No Signal screen immediately.
+                 }
+             });
+
+            // --- Swipe Event Listeners ---
+            // Start swipe
+            playerContainer.addEventListener('mousedown', handleSwipeStart);
+            playerContainer.addEventListener('touchstart', handleSwipeStart, { passive: true }); // Use passive for touchstart
+
+            // Track movement
+            // Added event listeners to document to track swipe even if pointer leaves container
+            document.addEventListener('mousemove', handleSwipeMove);
+            document.addEventListener('touchmove', handleSwipeMove, { passive: false }); // Need non-passive for preventDefault
+
+            // End swipe
+            document.addEventListener('mouseup', handleSwipeEnd); // Listen on document
+            document.addEventListener('touchend', handleSwipeEnd); // Listen on document
+            document.addEventListener('mouseleave', handleSwipeEnd); // End swipe if mouse leaves document (unlikely but safe)
+            document.addEventListener('touchcancel', handleSwipeEnd); // End swipe if touch is cancelled
+
+
+            // Fetch and display channels from the external M3U
+            fetchChannels();
+
+            // Use event delegation for channel card clicks on the grid
+            channelGrid.addEventListener('click', (event) => {
+                const channelCard = event.target.closest('.channel-card');
+                if (channelCard) {
+                    // Get the *original* channel index from the data attribute
+                    const originalIndex = parseInt(channelCard.getAttribute('data-original-index'), 10);
+                    if (!isNaN(originalIndex) && originalIndex >= 0 && originalIndex < channelsList.length) {
+                        openPlayer(originalIndex); // Pass the original channel index
+                    } else {
+                        console.warn("Clicked card has invalid data-original-index:", channelCard, "Index:", originalIndex);
+                         mainErrorMessage.textContent = 'Cannot play: Channel data missing or invalid.';
+                         mainErrorMessage.style.display = 'block';
+                    }
+                }
+            });
+
+             // Add event listeners for search
+             searchButton.addEventListener('click', performSearch);
+             searchInput.addEventListener('input', performSearch); // Live search on input change
+        });
+
+
+        // --- Swipe Handling Functions ---
+        function handleSwipeStart(event) {
+            // Check if the interaction is on a Plyr control element or the close button
+            const target = event.target;
+            const path = event.composedPath ? event.composedPath() : (event.path || []);
+
+            // Check if the clicked element or any ancestor is a Plyr control element or the close button
+            // Stop checking up the path if we reach the player container itself
+             // Also, if error-active is true, the only interactive elements should be the close button,
+             // so clicks anywhere else on the container should be treated as potential swipe starts.
+            const isControl = !playerOverlay.classList.contains('error-active') && (path.some(el => {
+                 if (el === playerContainer) return false; // Stop at the container
+                 // Check if the element is or contains a Plyr control class
+                 if (el.closest && (el.closest('.plyr__controls') || el.closest('.plyr__progress') || el.closest('.plyr__time') || el.closest('.plyr__settings'))) return true; // Added settings
+                 return false;
+            }) || target.id === 'close-player-btn'); // Close button check still valid
+
+            if (isControl) {
+                 console.log('Interaction on control or close button, ignoring swipe start.'); // Debug
+                 isSwiping = false; // Ensure it's false
+                 return;
+            }
+            console.log('Swipe Start detected on player container.'); // Debug
+
+            isSwiping = true;
+            // Get the starting coordinates based on event type
+            startX = event.clientX || (event.touches && event.touches[0] ? event.touches[0].clientX : 0);
+            startY = event.clientY || (event.touches && event.touches[0] ? event.touches[0].clientY : 0);
+
+             // Prevent default only if it's a touch event that might cause scrolling
+             if (event.type === 'touchstart') {
+                 // We won't preventDefault here, will do it in touchmove if it looks like a horizontal swipe
+                 // This allows vertical scrolling if the user intended that
+             }
+        }
+
+        function handleSwipeMove(event) {
+            if (!isSwiping) return;
+
+            const currentX = event.clientX || (event.touches && event.touches[0] ? event.touches[0].clientX : 0);
+             const currentY = event.clientY || (event.touches && event.touches[0] ? event.touches[0].clientY : 0);
+            const diffX = currentX - startX;
+            const diffY = currentY - startY;
+
+            // If horizontal movement exceeds a small threshold AND is significantly more than vertical movement,
+            // prevent default touch event to stop vertical scrolling if it looks like a horizontal swipe
+             // Added Math.abs(diffX) > swipeVerticalThreshold check
+             if (Math.abs(diffX) > 10 && Math.abs(diffX) > Math.abs(diffY) * 1.5 && Math.abs(diffY) < swipeVerticalThreshold) { // Horizontal movement is at least 1.5x vertical AND vertical movement is below threshold
+                if (event.type === 'touchmove') {
+                    event.preventDefault(); // Prevent scrolling
+                     console.log('Prevented default touchmove for horizontal swipe.'); // Debug
+                }
+             }
+            // console.log('Swipe Move:', currentX, currentY, 'Diff:', diffX, diffY); // Debug
+        }
+
+        function handleSwipeEnd(event) {
+            if (!isSwiping) return;
+
+            // For mouseup/touchend, get the final coordinate from changedTouches for touch events
+            const endX = event.clientX || (event.changedTouches && event.changedTouches[0] ? event.changedTouches[0].clientX : startX); // Fallback to startX if no end coordinate
+             const endY = event.clientY || (event.changedTouches && event.changedTouches[0] ? event.changedTouches[0].clientY : startY);
+
+            const diffX = endX - startX;
+             const diffY = endY - startY;
+
+            isSwiping = false; // Reset the flag immediately
+
+            // console.log('Swipe End:', endX, endY, 'Diff:', diffX, diffY); // Debug
+
+            // Check if the movement is primarily horizontal and exceeds the threshold
+             if (Math.abs(diffX) > swipeThreshold && Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffY) < swipeVerticalThreshold) { // Horizontal movement must exceed threshold and be greater than vertical movement AND vertical movement below threshold
+                // It's a valid horizontal swipe
+                if (diffX > 0) { // Swiped right (positive difference) -> Previous Channel
+                    console.log('Swipe Right detected');
+                    playPreviousChannel();
+                } else { // Swiped left (negative difference) -> Next Channel
+                    console.log('Swipe Left detected');
+                    playNextChannel();
+                }
+            } else {
+                // It was a click, tap, small drag, or mostly vertical swipe
+                 console.log('Tap, small drag, or non-horizontal swipe detected.');
+                 // If the error screen is showing, we don't want taps to interact with the hidden player.
+                 // If error screen is NOT showing, let Plyr handle clicks/taps on the video area.
+                 if (!playerOverlay.classList.contains('error-active') && player) {
+                      // Let Plyr handle the click/tap for play/pause or showing controls
+                      // We don't need explicit code here, as the event bubbles to Plyr's elements
+                      console.log('Non-swipe on player during normal playback. Letting Plyr handle.');
+                 } else if (playerOverlay.classList.contains('error-active')) {
+                      // Tap on error screen background - do nothing
+                       console.log('Tap on error screen background. Doing nothing.');
+                 }
+            }
+
+            // Reset startX/startY
+            startX = 0;
+            startY = 0;
+        }
+
+
+         // Helper function to display error message AND No Signal image
+        function displayPlayerError(message = 'An error occurred.') {
+             const videoElement = document.getElementById('video-player');
+
+            if (playerErrorMessageDiv && videoElement && noSignalImage && closePlayerBtn && customPlayerText && playerOverlay && player && player.elements && player.elements.container) {
+                console.error("Displaying player error and No Signal screen:", message);
+
+                // Stop Plyr and HLS if running
+                 if (player) player.stop();
+                 if (hls) { hls.destroy(); hls = null; }
+
+                 // Add the error-active class to trigger specific CSS rules
+                 playerOverlay.classList.add('error-active');
+
+                 // Hide the text error message overlay (we are showing the image instead)
+                 playerErrorMessageDiv.style.display = 'none';
+                 playerErrorMessageDiv.textContent = '';
+
+                 // Explicitly tell Plyr to hide its controls (this will add controls-hidden class)
+                 // The CSS rules for .error-active will override effects on the close button
+                 if(player.toggleControls) player.toggleControls(false);
+
+                 // The error-active CSS class now handles:
+                 // - Showing noSignalImage
+                 // - Hiding videoElement and Plyr container (.plyr)
+                 // - Hiding customPlayerText
+                 // - Ensuring closePlayerBtn is visible and interactive
+                 // - Ensuring playerContainer is interactive for swipes
+            } else {
+                 console.error("Could not display player error screen, missing elements or player not initialized.");
+            }
+        }
+
+         // Helper function to hide the error message and show the video/controls
+        function hidePlayerError() {
+             const videoElement = document.getElementById('video-player');
+
+             if (playerErrorMessageDiv && videoElement && noSignalImage && closePlayerBtn && customPlayerText && playerOverlay && player && player.elements && player.elements.container) {
+                 console.log("Hiding player error and No Signal screen.");
+
+                 // Remove the error-active class
+                 playerOverlay.classList.remove('error-active');
+
+                 // Hide error text
+                 playerErrorMessageDiv.style.display = 'none';
+                 playerErrorMessageDiv.textContent = '';
+
+
+                 // Restore default state. The CSS for :not(.controls-hidden) will apply,
+                 // and Plyr controls will become visible because toggleControls(true) is called.
+
+                 // Explicitly tell Plyr to show its controls
+                 if(player.toggleControls) player.toggleControls(true);
+
+                 // The removal of .error-active class handles:
+                 // - Hiding noSignalImage
+                 // - Showing videoElement and Plyr container (.plyr) (handled by Plyr's own display/visibility when controls are active)
+                 // - Showing customPlayerText (controlled by .controls-hidden sync)
+                 // - Letting closePlayerBtn opacity/pointer-events be controlled by .controls-hidden sync
+                 // - Letting playerContainer interaction be standard
+             } else {
+                 console.warn("Could not hide player error screen, missing elements or player not initialized.");
+             }
+        }
+
+
+        // Function to parse M3U content
+        function parseM3u(m3uText) {
+            const channels = [];
+            const lines = m3uText.split('\n');
+            let currentChannel = null;
+
+            for (const line of lines) {
+                const trimmedLine = line.trim();
+                if (trimmedLine.startsWith('#EXTINF:')) {
+                    currentChannel = {};
+                    const commaIndex = trimmedLine.lastIndexOf(',');
+                    if (commaIndex > -1) {
+                        currentChannel.name = trimmedLine.substring(commaIndex + 1).trim();
+                    } else {
+                         currentChannel.name = 'Unknown Channel';
+                    }
+                    const logoMatch = trimmedLine.match(/tvg-logo="([^"]*)"/);
+                    if (logoMatch && logoMatch[1]) {
+                        currentChannel.logoUrl = logoMatch[1];
+                    } else {
+                         currentChannel.logoUrl = 'https://via.placeholder.com/90?text=Logo'; // Default logo
+                    }
+                     const groupMatch = trimmedLine.match(/group-title="([^"]*)"/);
+                     if (groupMatch && groupMatch[1]) {
+                          currentChannel.group = groupMatch[1];
+                     } else {
+                          currentChannel.group = 'Other'; // Default group
+                     }
+
+                } else if (currentChannel && trimmedLine && !trimmedLine.startsWith('#') && !trimmedLine.startsWith('#EXT')) { // Added check for other #EXT lines
+                    currentChannel.streamUrl = trimmedLine;
+                    channels.push(currentChannel);
+                    currentChannel = null; // Reset for the next channel
+                } else if (currentChannel && trimmedLine.startsWith('#EXT')) {
+                    // Ignore other #EXT lines after EXTINF until URL is found
+                } else if (currentChannel && !trimmedLine && currentChannel.name) {
+                     // Handle empty lines after EXTINF without a URL - discard the incomplete channel but log if name exists
+                     console.warn("Discarding incomplete channel entry after EXTINF (missing URL):", currentChannel.name);
+                     currentChannel = null;
+                } else if (currentChannel) {
+                     // Handle other cases where EXTINF is followed by something unexpected
+                     console.warn("Discarding incomplete channel entry due to unexpected line:", trimmedLine, "after:", currentChannel.name || 'EXTINF');
+                     currentChannel = null;
+                }
+            }
+             // Filter out channels without a stream URL
+            return channels.filter(channel => channel.streamUrl);
+        }
+
+
+        // Function to fetch channels from the specified M3U URLs
+        async function fetchChannels() {
+            mainErrorMessage.style.display = 'none';
+            mainErrorMessage.textContent = '';
+            noResultsMessage.style.display = 'none';
+            loadingMessage.style.display = 'block';
+            channelGrid.innerHTML = ''; // Clear previous content
+            channelsList = []; // Clear previous channels
+
+            const fetchPromises = M3U_URLS.map(url =>
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            console.error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+                            throw new Error(`HTTP error! status: ${response.status} from ${url}`);
+                        }
+                        return response.text();
+                    })
+                    .catch(error => {
+                         console.error(`Error fetching ${url}:`, error);
+                         // Return a rejected promise or an object indicating failure
+                         return Promise.reject({ url, error }); // Reject with custom object
+                    })
+            );
+
+            try {
+                // Use allSettled to handle promises independently
+                const results = await Promise.allSettled(fetchPromises);
+                let allChannels = [];
+                let hasAnySuccessfulFetch = false;
+
+                results.forEach(result => {
+                    if (result.status === 'fulfilled') {
+                        hasAnySuccessfulFetch = true;
+                        try {
+                            const parsedChannels = parseM3u(result.value);
+                            allChannels = allChannels.concat(parsedChannels);
+                             console.log(`Successfully loaded ${parsedChannels.length} channels from one source.`);
+                        } catch (parseError) {
+                            console.error(`Error parsing M3U text from one source:`, parseError);
+                        }
+                    } else {
+                         // result.reason contains the object we rejected with { url, error }
+                         console.error(`Failed to load playlist from ${result.reason.url}:`, result.reason.error);
+                    }
+                });
+
+                // Optional: Remove duplicate channels based on stream URL or a unique ID if available
+                // const uniqueChannels = [];
+                // const streamUrls = new Set();
+                // allChannels.forEach(channel => {
+                //      if (!streamUrls.has(channel.streamUrl)) {
+                //           streamUrls.add(channel.streamUrl);
+                //           uniqueChannels.push(channel);
+                //      }
+                // });
+                // channelsList = uniqueChannels;
+
+                channelsList = allChannels; // Use all channels, including potential duplicates
+
+                loadingMessage.style.display = 'none';
+
+                if (channelsList.length > 0) {
+                    renderChannels(channelsList); // Render the combined list
+                } else {
+                    channelGrid.innerHTML = ''; // Ensure grid is empty
+                    // Check if any fetch was successful but returned no channels, or if all failed
+                    if (M3U_URLS.length > 0 && !hasAnySuccessfulFetch) {
+                         mainErrorMessage.textContent = 'Failed to load channels from all sources.';
+                         mainErrorMessage.style.display = 'block';
+                         console.error('All M3U sources failed to load.');
+                    } else {
+                         noResultsMessage.textContent = 'No channels available from the provided playlists.';
+                         noResultsMessage.style.display = 'block';
+                         console.warn('M3U sources loaded but returned no valid channels.');
+                    }
+                }
+
+            } catch (error) {
+                // This catch block would primarily catch errors in the Promise.allSettled setup itself,
+                // not individual fetch errors, which are handled within the map.
+                console.error("Unexpected error during channel fetching:", error);
+                loadingMessage.style.display = 'none';
+                mainErrorMessage.textContent = 'An unexpected error occurred while loading channels.';
+                mainErrorMessage.style.display = 'block';
+            }
+        }
+
+        // Function to render channels
+        // Takes a list of channels to display (filtered or full)
+        function renderChannels(channelsToRender) {
+            channelGrid.innerHTML = ''; // Clear grid before rendering
+            noResultsMessage.style.display = 'none'; // Hide no results message
+            mainErrorMessage.style.display = 'none'; // Hide main error message
+
+
+            if (!channelsToRender || channelsToRender.length === 0) {
+                 noResultsMessage.textContent = searchInput.value.trim() ? 'No channels found matching your search.' : 'No channels available from the provided playlists.'; // More specific message if search is active
+                 noResultsMessage.style.display = 'block';
+                 return;
+            }
+
+            channelsToRender.forEach(channel => {
+                 // Find the original index of this channel in the global channelsList
+                 // This is important for navigation (prev/next) to work correctly on the full list
+                 // Note: If there are duplicates from different lists, findIndex might find the first one.
+                 // If precise index is critical for navigating duplicates, a more complex ID system might be needed.
+                 const originalIndex = channelsList.findIndex(c => c.streamUrl === channel.streamUrl && c.name === channel.name); // Find by streamUrl AND name
+
+                 if (originalIndex === -1 || !channel.streamUrl) {
+                     // This should theoretically not happen if channelsToRender comes from channelsList
+                     // and channelsList is filtered for streamUrl, but is a safeguard.
+                     console.warn("Skipping rendering for channel without original index or streamUrl:", channel);
+                     return;
+                 }
+
+
+                const channelCard = document.createElement('div');
+                channelCard.classList.add('channel-card');
+                // Store the original index
+                channelCard.setAttribute('data-original-index', originalIndex);
+
+                const logoWrapper = document.createElement('div');
+                logoWrapper.classList.add('channel-logo-wrapper');
+
+                const logoImg = document.createElement('img');
+                logoImg.src = channel.logoUrl;
+                logoImg.alt = channel.name + " Logo";
+                logoImg.onerror = function() {
+                     // console.warn(`Failed to load logo for ${channel.name}: ${this.src}`); // Optional: log errors
+                     this.src = 'https://via.placeholder.com/90?text=Logo'; // Use fallback
+                     this.style.objectFit = 'cover'; // Adjust style for placeholder
+                };
+
+                logoWrapper.appendChild(logoImg);
+
+                const channelName = document.createElement('span');
+                channelName.classList.add('channel-name');
+                channelName.textContent = channel.name;
+
+                channelCard.appendChild(logoWrapper);
+                channelCard.appendChild(channelName);
+
+                channelGrid.appendChild(channelCard);
+            });
+        }
+
+        // Function to perform search filtering
+        function performSearch() {
+             const query = searchInput.value.toLowerCase().trim();
+             let filteredChannels = [];
+
+             if (query) {
+                 filteredChannels = channelsList.filter(channel => {
+                      // Filter by name (case-insensitive)
+                     return channel.name.toLowerCase().includes(query);
+                 });
+             } else {
+                 // If search query is empty, show all channels
+                 filteredChannels = channelsList;
+             }
+
+             renderChannels(filteredChannels); // Render the filtered list
+        }
+
+
+        // Function to open and play the video player using HLS.js
+        // Accepts the *original* channel index from channelsList
+        function openPlayer(originalIndex) {
+            const video = document.getElementById('video-player');
+
+            // Check if the channel list is loaded and the index is valid
+             if (!channelsList || channelsList.length === 0) {
+                 console.error("Cannot open player: Channel list is empty.");
+                 displayPlayerError('Channel list is empty or not loaded.');
+                 if (playerOverlay) playerOverlay.style.display = 'flex'; // Show overlay with error
+                 return;
+             }
+            if (originalIndex < 0 || originalIndex >= channelsList.length) {
+                 console.error("Invalid channel index provided:", originalIndex);
+                 displayPlayerError('Invalid channel index.');
+                 if (playerOverlay) playerOverlay.style.display = 'flex'; // Show overlay even with error
+                 return;
+            }
+
+
+            currentChannelIndex = originalIndex; // Store the current original index
+            const channel = channelsList[currentChannelIndex]; // Get the channel object from the original list
+            const streamUrl = channel.streamUrl; // Get the stream URL
+
+            if (!streamUrl) {
+                console.error("Stream URL is empty for channel index:", currentChannelIndex, channel);
+                displayPlayerError('Invalid stream URL provided for playback.');
+                if (playerOverlay) playerOverlay.style.display = 'flex'; // Show overlay
+                return;
+            }
+
+            if (playerOverlay) playerOverlay.style.display = 'flex'; // Show the player overlay
+
+            // Ensure error message is hidden and player elements are in default state (visible) for next open
+             hidePlayerError(); // This hides the error message/image and resets display for player elements
+
+
+            // --- Reset and Setup Player ---
+            // Stop and destroy any previous player/HLS instance
+            if (player) {
+                 player.stop(); // Stop Plyr playback
+                 // Clear Plyr source reference - important before setting new source
+                 player.currentSrc = null;
+                 // Explicitly remove native src
+                 if (video) video.removeAttribute('src');
+                 // Reset video element state (needed for some browsers)
+                 if (video) video.load(); // Call load after removing src
+
+                 // Ensure Plyr container is visible before loading new source (it will be hidden by .error-active if error occurs)
+                  if (player.elements && player.elements.container) {
+                      player.elements.container.style.visibility = 'visible';
+                  }
+                   // Explicitly show Plyr controls initially for user interaction
+                   // This will trigger 'controlsenabled' and sync custom controls
+                  if(player.toggleControls) player.toggleControls(true);
+            }
+             // Destroy HLS.js instance if it exists
+            if (hls) {
+                hls.destroy();
+                hls = null;
+            }
+
+
+            // --- Attempt to play the stream ---
+            if (video && Hls.isSupported()) {
+                hls = new Hls({
+                    startLevel: -1, // Auto start level
+                    capLevelToPlayerSize: true,
+                    maxBufferLength: 30,
+                    maxMaxBufferLength: 600,
+                    manifestLoadingTimeOut: 10000, // 10 seconds timeout
+                    levelLoadingTimeOut: 10000, // 10 seconds timeout for segments
+                    fragLoadingTimeOut: 10000, // 10 seconds timeout for fragments
+                     // retryConfig: { maxNumRetry: 5, retryDelayMs: 1000, maxRetryDelayMs: 4000 }, // Example retry config
+                });
+
+                hls.loadSource(streamUrl);
+                hls.attachMedia(video);
+
+                hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
+                     console.log("HLS Manifest Parsed. Attempting playback.");
+                     // Configure Plyr's quality control using HLS levels
+                     if (player.hasOwnProperty('quality') && data.levels && data.levels.length > 0) {
+                         const qualityOptions = data.levels.map((level, i) => ({
+                             size: level.height || level.bitrate || 'Unknown', // Use height or bitrate
+                             index: i // Store HLS level index
+                         }));
+
+                         // Sort by size (bitrate or height) descending, handle 'Unknown'
+                         qualityOptions.sort((a, b) => {
+                             const sizeA = typeof a.size === 'number' ? a.size : (typeof a.size === 'string' && !isNaN(parseInt(a.size)) ? parseInt(a.size) : -1);
+                             const sizeB = typeof b.size === 'number' ? b.size : (typeof b.size === 'string' && !isNaN(parseInt(b.size)) ? parseInt(b.size) : -1);
+
+                              if (sizeA === -1 && sizeB === -1) return 0;
+                             if (sizeA === -1) return 1;
+                             if (sizeB === -1) return -1;
+                             return sizeB - sizeA; // Descending
+                         });
+
+                         player.quality = {
+                             // Default to the highest available resolution index after sorting
+                             default: qualityOptions[0] ? qualityOptions[0].index : 0,
+                             options: qualityOptions.map(q => q.index), // Use original HLS indices for options
+                             forced: true,
+                             onChange: (newQualityIndex) => {
+                                 hls.currentLevel = newQualityIndex; // Set HLS level by index
+                             },
+                         };
+                          console.log("Plyr Quality Control initialized with HLS levels:", qualityOptions);
+                     } else if (player.hasOwnProperty('quality')) {
+                          // If Plyr has quality control but HLS found no levels
+                           player.quality = { default: 0, options: [], forced: true, onChange: () => {} }; // Reset quality options
+                          console.warn("HLS levels not available for quality control.");
+                     }
+
+                    // Attempt to play after manifest is parsed
+                     player.play().catch(error => {
+                          console.warn("Autoplay after manifest parsed prevented:", error);
+                           if (error.name === 'NotAllowedError' || error.name === 'AbortError') {
+                                // Display a message via Plyr or custom element if autoplay is blocked by the browser
+                                // For now, let Plyr handle the visual cue for needing interaction
+                                console.log('Autoplay blocked, user interaction needed.');
+                           } else {
+                               // Handle other potential autoplay errors that might be fatal
+                               console.error("Autoplay failed with error:", error);
+                               displayPlayerError(`Autoplay failed: ${error.message || 'Unknown Error'}`);
+                          }
+                     });
+                });
+
+                hls.on(Hls.Events.ERROR, function (event, data) {
+                    let errorText = `HLS Error (${data.type} - ${data.details}): ${data.fatal ? 'Fatal' : 'Non-fatal'}.`;
+                    console.error(errorText, data);
+
+                    // Check if it's a fatal error that we should handle by showing No Signal
+                    const shouldDisplayFatal = data.fatal && !(data.type === Hls.ErrorTypes.MEDIA_ERROR || (data.type === Hls.ErrorTypes.NETWORK_ERROR && (data.details === Hls.ErrorDetails.FRAGMENT_LOAD_ERROR || data.details === Hls.ErrorDetails.FRAGMENT_LOAD_TIMEOUT || data.details === Hls.ErrorDetails.BUFFER_APPENDING_ERROR || data.details === Hls.ErrorDetails.BUFFER_STALLED_ERROR)));
+
+                    if (shouldDisplayFatal) {
+                         let userMessage = 'Playback Error: Could not load stream.'; // Default fatal message
+
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                 userMessage = 'Network Error: Could not load stream data.';
+                                 switch(data.details) {
+                                     case Hls.ErrorDetails.MANIFEST_LOAD_ERROR:
+                                     case Hls.ErrorDetails.MANIFEST_LOAD_TIMEOUT:
+                                     case Hls.ErrorDetails.LEVEL_LOAD_ERROR:
+                                     case Hls.ErrorDetails.LEVEL_LOAD_TIMEOUT:
+                                         userMessage = 'Error loading stream data (Network Timeout or Invalid Format).';
+                                         break;
+                                      case Hls.ErrorDetails.KEY_LOAD_ERROR:
+                                      case Hls.ErrorDetails.KEY_LOAD_TIMEOUT:
+                                           userMessage = 'DRM Key Error: Could not load decryption key.';
+                                           break;
+                                      // Fragment/Buffer errors are handled by HLS.js recovery attempts first
+                                      // If they fail and become truly fatal, they might fall through here or trigger MEDIA_ERROR
+                                 }
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                 userMessage = 'Media Playback Error.'; // Should be handled by recovery attempt first
+                                 break;
+                            case Hls.ErrorTypes.KEY_SYSTEM_ERROR:
+                                userMessage = 'Content playback error: DRM issue.';
+                                break;
+                             case Hls.ErrorTypes.MUX_ERROR:
+                                userMessage = 'Stream processing error.';
+                                break;
+                             case Hls.ErrorTypes.MANIFEST_PARSING_ERROR:
+                                  userMessage = 'Manifest Parsing Error: Invalid stream format.';
+                                break;
+                             case Hls.ErrorTypes.BUFFER_APPENDING_ERROR:
+                             case Hls.ErrorTypes.BUFFER_STALLED_ERROR:
+                                  userMessage = 'Buffering Error: Playback interrupted.'; // Should be handled by recovery attempt first
+                                  break;
+                            default:
+                                userMessage = 'Unrecoverable Playback Error.';
+                        }
+
+                        // If it's a fatal error that recovery didn't handle or isn't applicable
+                        console.error("Destroying HLS instance after unhandled fatal error.");
+                         if (hls) {
+                             hls.destroy();
+                             hls = null;
+                         }
+                         displayPlayerError(userMessage); // Show the No Signal screen
+
+
+                    } else if (data.fatal && (data.type === Hls.ErrorTypes.MEDIA_ERROR || (data.type === Hls.ErrorTypes.NETWORK_ERROR && (data.details === Hls.ErrorDetails.FRAGMENT_LOAD_ERROR || data.details === Hls.ErrorDetails.FRAGMENT_LOAD_TIMEOUT || data.details === Hls.ErrorDetails.BUFFER_APPENDING_ERROR || data.details === Hls.ErrorDetails.BUFFER_STALLED_ERROR)))) {
+                        // These fatal errors often have recovery mechanisms in HLS.js
+                        console.warn("Fatal HLS error with potential recovery:", data.details, "Attempting recovery...");
+                        // HLS.js should handle the recovery internally, we don't need to call recoverMediaError explicitly here typically
+                        // If recovery fails after retries, HLS might emit another fatal error or transition state
+                    }
+                    else {
+                         console.warn("Non-fatal HLS error:", data.details);
+                         // Allow HLS.js internal retry/recovery for non-fatal errors
+                         // No need to call displayPlayerError here
+                    }
+                });
+
+            } else if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+                // For browsers with native HLS support (e.g., Safari on iOS/macOS)
+                console.log("Using Native HLS playback.");
+                 if (hls) { hls.destroy(); hls = null; } // Destroy HLS if it was somehow active
+
+                video.src = streamUrl;
+                video.addEventListener('loadedmetadata', () => {
+                     console.log("Native HLS loaded metadata. Attempting playback.");
+                     player.play().catch(error => {
+                          console.warn("Native Autoplay prevented:", error);
+                           if (error.name === 'NotAllowedError' || error.name === 'AbortError') {
+                              // Autoplay blocked, user interaction needed. Plyr should handle the UI cue.
+                              console.log('Native Autoplay blocked, user interaction needed.');
+                          } else {
+                               // Handle other potential autoplay errors that might be fatal
+                               console.error("Native autoplay failed with error:", error);
+                               displayPlayerError(`Autoplay failed: ${error.message || 'Unknown Error'}`);
+                          }
+                     });
+                }, { once: true }); // Use { once: true } to auto-remove listener
+
+                video.addEventListener('error', (e) => {
+                    console.error("Native video playback error:", e);
+                    let message = 'Native playback error.';
+                     if (video.error) {
+                         console.error("Video error code:", video.error.code);
+                          switch(video.error.code) {
+                             case MediaError.MEDIA_ERR_NETWORK: message = 'Network error occurred during playback.'; break;
+                             case MediaError.MEDIA_ERR_DECODE: message = 'Video playback was aborted due to a corruption problem or because the video used features your browser did not support.'; break;
+                             case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED: message = 'The video could not be loaded, either because the server or network failed or because the format is not supported.'; break;
+                              case MediaError.MEDIA_ERR_ABORTED: message = 'Video playback was aborted.'; break; // Aborted is often not fatal from user perspective (e.g. paused)
+                             default: message = 'An unknown error occurred.';
+                          }
+                     }
+                     // Only show No Signal for errors that prevent playback from starting or continuing
+                     if (video.error && video.error.code !== MediaError.MEDIA_ERR_ABORTED) {
+                          displayPlayerError(message); // Display native errors as fatal visually
+                     } else {
+                         console.warn("Non-fatal native video error:", message); // Log aborted errors etc.
+                     }
+                }, { once: true });
+
+            } else {
+                 // Fallback for browsers that don't support HLS
+                 console.error("HLS is not supported in this browser.");
+                 displayPlayerError('Your browser does not support HLS playback.');
+                 if (playerOverlay) playerOverlay.style.display = 'flex'; // Show overlay with error
+            }
+        }
+
+        // Function to play the previous channel (with loop)
+        function playPreviousChannel() {
+            if (!channelsList || channelsList.length === 0) {
+                 console.warn("Cannot play previous channel, channel list is empty.");
+                 // Optionally display a message or close player here
+                 return;
+            }
+
+            let prevIndex = currentChannelIndex - 1;
+            // Loop from first channel back to the last
+            if (prevIndex < 0) {
+                prevIndex = channelsList.length - 1;
+            }
+             console.log(`Playing previous channel. Current index: ${currentChannelIndex}, New index: ${prevIndex}`);
+            openPlayer(prevIndex);
+        }
+
+        // Function to play the next channel (with loop)
+        function playNextChannel() {
+             if (!channelsList || channelsList.length === 0) {
+                 console.warn("Cannot play next channel, channel list is empty.");
+                  // Optionally display a message or close player here
+                 return;
+            }
+
+            let nextIndex = currentChannelIndex + 1;
+            // Loop from last channel back to the first
+            if (nextIndex >= channelsList.length) {
+                nextIndex = 0;
+            }
+             console.log(`Playing next channel. Current index: ${currentChannelIndex}, New index: ${nextIndex}`);
+            openPlayer(nextIndex);
+        }
+
+
+        // Removed updateNavigationButtonsState
+
+
+        // Function to close the video player
+        function closePlayer() {
+            console.log("Closing player...");
+            // Stop and destroy player/HLS resources
+            if (player) {
+                player.stop(); // Stop Plyr playback
+                 player.currentSrc = null; // Clear Plyr source reference
+                 // Explicitly hide controls when closing
+                 if(player.toggleControls) player.toggleControls(false);
+            }
+            if (hls) {
+                hls.destroy(); // Important: free up HLS.js resources
+                hls = null;
+            }
+
+            // Reset native video element state
+            const video = document.getElementById('video-player');
+            if(video) {
+                video.removeAttribute('src');
+                video.load(); // Ensure reset
+            }
+
+            // Reset state variables
+            currentChannelIndex = -1; // Reset index
+
+            // Ensure error message/image is hidden and player elements are in default state (visible) for next open
+            hidePlayerError(); // This also removes the .error-active class
+
+            // Hide the main overlay
+            if (playerOverlay) {
+                 playerOverlay.style.display = 'none'; // Hide the player overlay
+                 // Ensure Plyr's hide-controls class is removed when closed
+                 if (player && player.elements && player.elements.container) {
+                      player.elements.container.classList.remove('plyr--hide-controls');
+                 }
+                 // Also ensure the controls-hidden class on the overlay is removed
+                 playerOverlay.classList.remove('controls-hidden');
+             }
+
+            console.log("Player closed and resources released.");
+        }
+
+         // Optional: Add listener to clear error message if user clicks the error area
+         // For now, we rely on the close button to exit the error state.
+
+    </script>
+
+</body>
+</html>
