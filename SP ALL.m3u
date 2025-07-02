@@ -2,9 +2,9 @@
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/T%20Sports.png"group-title="Live Sports" group-title="",Live Sports
 http://38.96.178.201/live/TSports/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/16-by-xfireflix.png", Star Sports 1
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=https://d3.merichunidya.com:1686/hls/star1in.m3u8?md5=jY3BYZIaToZndxI9n02W6g&expires=1751480508
+https://d3.merichunidya.com:1686/hls/star1in.m3u8?md5=jY3BYZIaToZndxI9n02W6g&expires=1751480508
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/1-by-xfireflix.png", Star Sports 1 Hindi
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=https://d1.merichunidya.com:1686/hls/starhindi.m3u8?md5=4SQAzwBo6d6aQADI-2rWlw&expires=1751480508
+https://d1.merichunidya.com:1686/hls/starhindi.m3u8?md5=4SQAzwBo6d6aQADI-2rWlw&expires=1751480508
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/20-by-xfireflix.png", PTV Sports
 https://d1.merichunidya.com:1686/hls/ptvpk.m3u8?md5=Yz1kcu7oZdrzzO7PX0vumA&expires=1751480508
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/38-by-xfireflix.png", Willow HD
@@ -20,7 +20,7 @@ https://d5.merichunidya.com:1686/hls/skyscric.m3u8?md5=tgrFPBqXjsT7CHnSR0Za7A&ex
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/18-by-xfireflix.png", Sky Sports Main Event
 https://d2.merichunidya.com:1686/hls/skysme.m3u8?md5=RB26TO1FFiAd3bzKKY-SNg&expires=1751480509
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 1
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=https://d2.merichunidya.com:1686/hls/bbtsp1.m3u8?md5=20SBGuaVmsxgSsVia-WNnA&expires=1751480509
+https://d2.merichunidya.com:1686/hls/bbtsp1.m3u8?md5=20SBGuaVmsxgSsVia-WNnA&expires=1751480509
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 2
 https://d2.merichunidya.com:1686/hls/bbtsp2.m3u8?md5=HZBzKN0KtjALXC5iejBrww&expires=1751480509
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/tnt.png", TNT 3
