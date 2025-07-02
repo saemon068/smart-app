@@ -1,0 +1,59 @@
+
+#EXTM3U
+
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/CwMZcpP/sky-main-event.png" group-title="UK SPORTS",UK | Sky Sports Main Event
+https://a1xs.vip/2000001
+#EXTINF:-1 tvg-logo="https://i.ibb.co/rcSRMh9/sky-sports-pl.png" group-title="UK SPORTS",UK | Sky Sports Premier League
+https://a1xs.vip/2000002
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WcCrBqx/sky-football.png" group-title="UK SPORTS",UK | Sky Sports Football
+https://a1xs.vip/2000003
+
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/zJR49VW/TNT-Sports-1.png" group-title="UK SPORTS",UK | TNT Sports 1
+https://a1xs.vip/2000021
+
+# http://ky-iptv.com:80/MsLady2024/2024MsLady/1846762.ts
+
+# https://a1xs.vip/2000021
+
+# https://a1xs.vip/2000021
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/42MrDP7/TNT-Sports-2.png" group-title="UK SPORTS",UK | TNT Sports 2
+# http://ky-iptv.com:80/MsLady2024/2024MsLady/1846763.ts
+https://a1xs.vip/2000022
+
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/vvFPJw0/TNT-Sports-3.png" group-title="UK SPORTS",UK | TNT Sports 3
+# http://ky-iptv.com:80/MsLady2024/2024MsLady/1846764.ts
+
+https://a1xs.vip/2000023
+
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Fnbw8VV/TNT-Sports-4.png" group-title="UK SPORTS",UK | TNT Sports 4
+# http://ky-iptv.com:80/MsLady2024/2024MsLady/1846765.ts
+
+https://a1xs.vip/2000024
+
+# EXTINF:-1 tvg-logo="https://pixvid.org/images/2025/01/16/TNT-Sports-Ultimate.png" group-title="UK SPORTS",UK | TNT Sports Ultimate UHD
+# https://a1xs.vip/2000031
+
+
+#EXTINF:-1 tvg-id="TSN1.ca" tvg-name="TSN1" tvg-logo="https://i.ibb.co/sFh5z2s/TSN1.png" group-title="CA Sports",TSN1
+https://a1xs.vip/6000001
+#EXTINF:-1 tvg-id="TSN2.ca" tvg-name="TSN2" tvg-logo="https://i.ibb.co/2YPBw0D/TSN2.png" group-title="CA Sports",TSN2
+https://a1xs.vip/6000002
+#EXTINF:-1 tvg-id="TSN3.ca" tvg-name="TSN3" tvg-logo="https://i.ibb.co/z5RJ9Rj/TSN3.png" group-title="CA Sports",TSN3
+https://a1xs.vip/6000003
+#EXTINF:-1 tvg-id="TSN4.ca" tvg-name="TSN4" tvg-logo="https://i.ibb.co/5KtsP33/TSN4.png" group-title="CA Sports",TSN4
+https://a1xs.vip/6000004
+#EXTINF:-1 tvg-id="TSN5.ca" tvg-name="TSN5" tvg-logo="https://i.ibb.co/zncTyYH/TSN5.png" group-title="CA Sports",TSN5
+https://a1xs.vip/6000005
+#EXTINF:-1 tvg-id="Sportsnet.(Ontario).ca" tvg-name="https://pixvid.org/images/2025/02/07/SportsNet_Ontario.png" group-title="CA Sports",Sportsnet Ontario FHD
+https://a1xs.vip/6000011
+#EXTINF:-1 tvg-id="Sportsnet.One.ca" tvg-name="Sportsnet One FHD" tvg-logo="https://pixvid.org/images/2025/02/07/SportsNet_One.png" group-title="CA Sports",Sportsnet One FHD
+https://a1xs.vip/6000012
+#EXTINF:-1 tvg-id="Sportsnet.World.ca" tvg-name="Sportsnet World FHD" tvg-logo="https://pixvid.org/images/2025/02/07/SportsNet_World.png" group-title="CA Sports",Sportsnet World FHD
+https://a1xs.vip/6000013
+
+
