@@ -1,7 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://shorturl.at/3O3VS", T Sports 
-http://38.96.178.201/live/TSports/index.m3u8
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://stvlive.net:8080/tsports1/index.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/T%20Sports.png"group-title="Live Sports" group-title="",Live Sports
+http://38.96.178.201/live/TSports/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/16-by-xfireflix.png", Star Sports 1
 https://d3.merichunidya.com:1686/hls/star1in.m3u8?md5=jY3BYZIaToZndxI9n02W6g&expires=1751480508
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/1-by-xfireflix.png", Star Sports 1 Hindi
