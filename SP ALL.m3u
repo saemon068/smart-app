@@ -25,7 +25,7 @@ https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://stvlive.net:8080/sonyt
 
 
 
-#EXTM3U
+
 #EXTINF:-1 tvg-name="Sony MAX HD" tvg-logo="http://kst.moonplex.net/iptv/img/logo/Sony_Max.png" group-title="Indian",Sony MAX HD
 http://kst.moonplex.net:8080/CH1/index.m3u8
 
