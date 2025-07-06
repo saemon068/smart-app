@@ -18,6 +18,78 @@ http://125x.org:8080/bn6hd/tracks-v1a1/mono.m3u8
 
 
 
+#EXTINF:-1 tvg-id="sony-hd" tvg-name="SET HD" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SET-LOGO-HD.png" group-title="Entertainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", SET HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=ZhL4kzJV6TXoSAevsBtsIA%253D%253D&token=3Vv0YmXatFxYYnRlKdVAgQ%253D%253D&e=.m3u8
+
+
+
+#EXTINF:-1 tvg-id="sony-sab-hd" tvg-name="Sony SAB HD" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20SAB%20HD_WHITE.png" group-title="Entertainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony SAB HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=%252B%252FWEkG0SkApfKswYnZPTqA%253D%253D&token=6H%252B1iEdrmT9oBYx3jydApw%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-marathi" tvg-name="Sony Marathi" tvg-language="Marathi" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_MARATHI.png" group-title="Entertainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Marathii
+https://www.xfireflix.fun/SonyLiv/stream.php?id=KDklzh3s88%252B8mwPhgEVLJQ%253D%253D&token=t7hQopLEToWgosuGmrWEKg%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-pal" tvg-name="Sony Pal" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20PAL.png" group-title="Entertainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Pal
+https://www.xfireflix.fun/SonyLiv/stream.php?id=NILkenV3%252F11b8eAzLDfBZg%253D%253D&token=DD%252F44JzEEHcEAGjohnIJyw%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-aath" tvg-name="Sony Aath" tvg-language="Bengali" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20AATH.png" group-title="Entertainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Aath
+https://www.xfireflix.fun/SonyLiv/stream.php?id=2nQSvgSQSDFFVzBcLcRNxg%253D%253D&token=XFjrxXAkTp%252FdzGJV3tUjBQ%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-yay" tvg-name="Sony Yay" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20YAY.png" group-title="Kids" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Yay
+https://www.xfireflix.fun/SonyLiv/stream.php?id=7CouCbEnQi%252B6GQKEwI%252FBxA%253D%253D&token=VyLOpXwsRxRBfqdBSmBZ3w%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-max-hd" tvg-name="Sony MAX HD" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_MAX-HD_WHITE.png" group-title="Movies" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony MAX HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=hWCvLkh9sa5qxMPO5Ap0rQ%253D%253D&token=dLb%252FDoYp2ig%252BRluUi5TVLg%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-max" tvg-name="Sony MAX" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_SD.png" group-title="Movies" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony MAX
+https://www.xfireflix.fun/SonyLiv/stream.php?id=DapWedgCL%252FcQ%252BFhmcZq7Rw%253D%253D&token=%252F4vfQR%252FeYvExevy8drXnBQ%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-max-2" tvg-name="Sony MAX 2" tvg-language="Hindi" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_MAX2.png" group-title="Movies" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony MAX 2
+https://www.xfireflix.fun/SonyLiv/stream.php?id=TBQ8tcF3PJONoOV6e72Y2w%253D%253D&token=SJHLNWIUj2nHaJK87fHKuQ%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-wah" tvg-name="Sony WAH" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_WAH.png" group-title="Movies" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony WAH
+https://www.xfireflix.fun/SonyLiv/stream.php?id=mwDTTj7CWeu37VL7luoPrw%253D%253D&token=70oz1Vw1a5OiJ1ZzYrrdfQ%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-pix-hd" tvg-name="Sony PIX HD" tvg-language="English" tvg-logo="https://sonypicturesnetworks.com/images/logos/PIX%20HD_WHITE.png" group-title="Movies" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony PIX HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=4Fs3aNGMiNKoSWSYYlHAAg%253D%253D&token=IS7Gy3LBEuf2kBjkgkCE3Q%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-bbc-earth-hd" tvg-name="Sony BBC Earth HD" tvg-language="English" tvg-logo="https://sonypicturesnetworks.com/images/logos/SBBCE_LOGO_NEW_PNG.png" group-title="Infotainment" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony BBC Earth HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=EsYvs1F%252FjLDz%252BU2BOKhCxw%253D%253D&token=fnQ6wEidtcsv7o5eGoPEhg%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-1" tvg-name="Sony Sports Ten 1" tvg-language="English" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen1_SD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 1
+https://www.xfireflix.fun/SonyLiv/stream.php?id=iroTZ42in8EUZcOiI5rg%252FA%253D%253D&token=MOD66DP%252FvWL8x6W1qV6SKA%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-2" tvg-name="Sony Sports Ten 2" tvg-language="English" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen2_SD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 2
+https://www.xfireflix.fun/SonyLiv/stream.php?id=u0ul7E%252FkmnlUtdPpRoqP%252FA%253D%253D&token=ShwhmngtpgJNid1n%252BsvNEg%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-3" tvg-name="Sony Sports Ten 3" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen3_SD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 3
+https://www.xfireflix.fun/SonyLiv/stream.php?id=PYZR3c8vrnn%252Bp9093Qn74w%253D%253D&token=s4DGufEwQsA9i6tWOQLLUQ%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-4" tvg-name="Sony Sports Ten 4" tvg-language="Hindi" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 4
+https://www.xfireflix.fun/SonyLiv/stream.php?id=relyCefhZQlAdzZJVIdneg%253D%253D&token=xysRnlX5v21MS0ZK%252BSY2eg%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-5" tvg-name="Sony Sports Ten 5" tvg-language="English" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 5
+https://www.xfireflix.fun/SonyLiv/stream.php?id=yq%252BxgQZXxYlfeuTIcOJ70A%253D%253D&token=Dd2f0yOeN%252B0M18kgPxwDWA%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-1-hd" tvg-name="Sony Sports Ten 1 HD" tvg-language="English" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen1_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 1 HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=hd07n1CgvZof2E5f10YeOA%253D%253D&token=blVXIe1gArGh0F%252Bkt9Y24w%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-2-hd" tvg-name="Sony Sports Ten 2 HD" tvg-language="English" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen2_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 2 HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=qE6B9OK9gXqhNb6jcVoaaQ%253D%253D&token=1xuXLiuTwSDpgQYX9%252F5%252FJA%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-3-hd" tvg-name="Sony Sports Ten 3 HD" tvg-language="Hindi" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen3_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 3 HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=9pp9HrzYXRkJKJ1RbhtT0Q%253D%253D&token=%252F%252B%252FK%252BOG3vTlM1YfeotFDkA%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-4-hd" tvg-name="Sony Sports Ten 4 HD" tvg-language="Hindi" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 4 HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=Yjwn7SeG4MWGyu%252Fh1DT8DA%253D%253D&token=dmI7xqILWr36X%252FFfQnGfWw%253D%253D&e=.m3u8
+
+#EXTINF:-1 tvg-id="sony-ten-5-hd" tvg-name="Sony Sports Ten 5 HD" tvg-language="English" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 5 HD
+https://www.xfireflix.fun/SonyLiv/stream.php?id=7rS0tG%252FnMT2N47cE8g68%252BA%253D%253D&token=KiW145f6cLC2HJVh20BYjw%253D%253D&e=.m3u8
+
+
+
+
+
 #EXTINF:-1 tvg-logo="https://i.ibb.co/zJR49VW/TNT-Sports-1.png" group-title="UK SPORTS",UK | TNT Sports 1
 https://a1xs.vip/2000021
 
