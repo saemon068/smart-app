@@ -153,10 +153,9 @@ http://kst.moonplex.net:8080/CH13/index.m3u8
 
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIdqXkEgtQPqr13XxzXkeDY_GfmDS2eTCrFm6elrGo9Li0-2-KeFCXGNH-&s=10" group-title="Xfireflix", T Sports 
-https://bdix.xfireflix.fun/stream.m3u8?id=3536
+https://www.xfireflix.fun/tatatv.m3u8?id=12104
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png" group-title="Sports", PTV Sports
-https://bdix.xfireflix.fun/stream.m3u8?id=3537
-
+https://www.xfireflix.fun/tatatv.m3u8?id=12172
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cc/SS1HD.jpg/revision/latest?cb=20240313194654" group-title="Sports",Star Sports 1 Hd
 https://bdix.xfireflix.fun/stream.m3u8?id=323039
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/ac/Star_Sports_2.jpg/revision/latest?cb=20191214232359" group-title="Xfireflix",Star Sports 2
