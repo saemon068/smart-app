@@ -105,7 +105,7 @@ https://crichdplaylist.extratvteam.workers.dev/master.m3u8?cid=bbtsp3
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Fnbw8VV/TNT-Sports-4.png" group-title="UK SPORTS",UK | TNT Sports 4
 https://crichdplaylist.extratvteam.workers.dev/master.m3u8?cid=bbtsp4
 
-#EXTINF:-1 tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm62Byk3UgzpWnENm_0igg6cJSXudbdfU90zH4XynuNeANjH2aKGiAeN9kqbcaya1OKaMsZT_WQgVoYvMtEq-Ht76Ii27msR-pKu2SXcMenUzY7BJVrkSZvJ6GoIezBxdOoU1ROyveR1AHxlAslzQmbH7RM0BSO-PEdLY_Jh5n5gnpzmw/s1600/ten%20cricket.jpg" group-title="UK SPORTS",UK | Ten Cricket
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMhVJFXkNYK7trsuhRe58ZK1-pQLUhD3T6w&s", Ten Cricket
 https://edge3-moblive.yuppcdn.net/drm/smil:tencricketdrm.smil/index.m3u8
 
 
