@@ -1,0 +1,832 @@
+[
+  {
+    "id": "122000",
+    "title": "BTV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561602643.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1717",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561595482.png",
+    "channelName": "BTV",
+    "position": 1,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561602643.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1709/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "119000",
+    "title": "AKASH GO Drama",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1737977432381.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bengali"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "53",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739906818123.png",
+    "channelName": "AKASH GO Drama",
+    "position": 2,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1737977432381.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1731/output/index.mpd",
+    "widevine": {
+      "channel_id": "e864851a-be2b"
+    }
+  },
+  {
+    "id": "134000",
+    "title": "Deepto TV HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713004511.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bengali"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "138",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713000749.png",
+    "channelName": "Deepto TV HD",
+    "position": 4,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713004511.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1711/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "97000",
+    "title": "Jamuna TV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560219668.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bengali"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1701",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560213832.png",
+    "channelName": "Jamuna TV",
+    "position": 7,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560219668.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1701/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "142000",
+    "title": "Sony AATH",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739907361705.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Indian Bengali"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "155",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739906659479.png",
+    "channelName": "Sony AATH",
+    "position": 8,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739907361705.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1732//output/index.mpd",
+    "widevine": {
+      "channel_id": "70f9fa1f-38af"
+    }
+  },
+  {
+    "id": "85000",
+    "title": "Al Jazeera",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735547257167.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1707",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735547218986.png",
+    "channelName": "Al Jazeera",
+    "position": 9,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735547257167.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1707/output/index.mpd",
+    "widevine": {
+      "channel_id": "ff28ffed-0cb9"
+    }
+  },
+  {
+    "id": "116000",
+    "title": "Sony Sports TEN 5",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739907504334.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "312",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739906861365.png",
+    "channelName": "Sony Sports TEN 5",
+    "position": 10,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739907504334.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1717/output/index.mpd",
+    "widevine": {
+      "channel_id": "2659ffb3-2b08"
+    }
+  },
+  {
+    "id": "118000",
+    "title": "Sony Sports TEN 1",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736160089004.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "308",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739906901952.png",
+    "channelName": "Sony Sports TEN 1",
+    "position": 12,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736160089004.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1719/output/index.mpd",
+    "widevine": {
+      "channel_id": "35fee7f3-d55d"
+    }
+  },
+  {
+    "id": "143000",
+    "title": "ZEE BANGLA",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735046747041.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1714",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735046738565.png",
+    "channelName": "ZEE BANGLA",
+    "position": 13,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735046747041.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1714/output/index.mpd",
+    "widevine": {
+      "channel_id": "8f95c9cd-6940"
+    }
+  },
+  {
+    "id": "93000",
+    "title": "ATN News",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735555493908.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1706",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739962961772.png",
+    "channelName": "ATN News",
+    "position": 15,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735555493908.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1706/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "100000",
+    "title": "Bangla Vision",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736163372670.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1715",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561344354.png",
+    "channelName": "Bangla Vision",
+    "position": 16,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736163372670.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1715/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "94000",
+    "title": "Channel 24 HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735556524751.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1703",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735556516924.png",
+    "channelName": "Channel 24 HD",
+    "position": 17,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735556524751.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1703/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "80000",
+    "title": "Cineplex HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735050228605.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Movies"
+    ],
+    "language": [
+      "Hindi"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1730",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735050221313.png",
+    "channelName": "Cineplex HD",
+    "position": 18,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735050228605.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1730/output/index.mpd",
+    "widevine": {
+      "channel_id": "e7eb2b46-bc76"
+    }
+  },
+  {
+    "id": "76000",
+    "title": "Colors Bangla",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735047648662.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1720",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739964774807.png",
+    "channelName": "Colors Bangla",
+    "position": 19,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735047648662.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1720/output/index.mpd",
+    "widevine": {
+      "channel_id": "f9e1c145-b66f"
+    }
+  },
+  {
+    "id": "102000",
+    "title": "Ekattor HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735558498135.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1705",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739963327549.png",
+    "channelName": "Ekattor HD",
+    "position": 22,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735558498135.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1705/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "65000",
+    "title": "HUM TV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736432290377.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1001",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739963480044.png",
+    "channelName": "HUM TV",
+    "position": 23,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736432290377.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1721/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "96000",
+    "title": "Independent TV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735559723673.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1704",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739964387847.png",
+    "channelName": "Independent TV",
+    "position": 24,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735559723673.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1704/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "77000",
+    "title": "Jalsha Movies",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735048473337.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Movies"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1724",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739965013824.png",
+    "channelName": "Jalsha Movies",
+    "position": 25,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735048473337.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1724/output/index.mpd",
+    "widevine": {
+      "channel_id": "dd5030d1-5cc8"
+    }
+  },
+  {
+    "id": "99000",
+    "title": "NTV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560848115.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1716",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560841094.png",
+    "channelName": "NTV",
+    "position": 27,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560848115.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1716/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "98000",
+    "title": "Somoy TV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736163335100.png",
+    "contentType": "LIVE",
+    "genre": [
+      "News"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1702",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png",
+    "channelName": "Somoy TV",
+    "position": 31,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736163335100.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1702/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "123000",
+    "title": "STAR GOLD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735554664289.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Movies"
+    ],
+    "language": [
+      "Hindi"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1726",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735554654688.png",
+    "channelName": "STAR GOLD",
+    "position": 32,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735554664289.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1729/output/index.mpd",
+    "widevine": {
+      "channel_id": "ssuwd28er-ihda"
+    }
+  },
+  {
+    "id": "86000",
+    "title": "Star Jalsha HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735547967722.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1713",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740372275659.png",
+    "channelName": "Star Jalsha HD",
+    "position": 33,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735547967722.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1713/output/index.mpd",
+    "widevine": {
+      "channel_id": "3c65b579-5825"
+    }
+  },
+  {
+    "id": "82000",
+    "title": "Star Movies HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735048747745.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Movies"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1725",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735048740482.png",
+    "channelName": "Star Movies HD",
+    "position": 34,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735048747745.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1725/output/index.mpd",
+    "widevine": {
+      "channel_id": "0f2ba568-bf5b"
+    }
+  },
+  {
+    "id": "87000",
+    "title": "Star Sports Select 1 HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735043617613.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1708",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735043602147.png",
+    "channelName": "Star Sports Select 1 HD",
+    "position": 38,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735043617613.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1708/output/index.mpd",
+    "widevine": {
+      "channel_id": "120d3fdc-8b3e"
+    }
+  },
+  {
+    "id": "89000",
+    "title": "Star Sports Select 2 HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045184177.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1710",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045174734.png",
+    "channelName": "Star Sports Select 2 HD",
+    "position": 39,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045184177.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1710/output/index.mpd",
+    "widevine": {
+      "channel_id": "26ba8aaf-c2cf"
+    }
+  },
+  {
+    "id": "90000",
+    "title": "Euro Sports HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045593252.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1712",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045577141.png",
+    "channelName": "Euro Sports HD",
+    "position": 40,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045593252.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1712/output/index.mpd",
+    "widevine": {
+      "channel_id": "df67fc1a-01d1"
+    }
+  },
+  {
+    "id": "144000",
+    "title": "Zee Bangla Cinema",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735049670857.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Movies"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1728",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740372108298.png",
+    "channelName": "Zee Bangla Cinema",
+    "position": 41,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735049670857.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1728/output/index.mpd",
+    "widevine": {
+      "channel_id": "35ec6c98-c95e"
+    }
+  },
+  {
+    "id": "117000",
+    "title": "Sony Sports TEN 2",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736160229504.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "309",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739907006666.png",
+    "channelName": "Sony Sports TEN 2",
+    "position": 74,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1736160229504.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1726/output/index.mpd",
+    "widevine": {
+      "channel_id": "f352d057-1907"
+    }
+  },
+  {
+    "id": "124000",
+    "title": "Sony Entertainment",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740380286501.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Hindi"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "175",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740380280065.png",
+    "channelName": "Sony Entertainment",
+    "position": 75,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740380286501.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1718/output/index.mpd",
+    "widevine": {
+      "channel_id": "368f3847-ed5e"
+    }
+  },
+  {
+    "id": "131000",
+    "title": "ATN Bangla",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740553745788.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "1722",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740553740665.png",
+    "channelName": "ATN Bangla",
+    "position": 76,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740553745788.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1722/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "132000",
+    "title": "Channel I HD",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740567655085.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bangla"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "116",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740567626692.png",
+    "channelName": "Channel I HD",
+    "position": 77,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740567655085.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1723/output/index.m3u8",
+    "widevine": null
+  },
+  {
+    "id": "146000",
+    "title": "Ten Cricket",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1745304846950.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Sports"
+    ],
+    "language": [
+      "English"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "600",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1745304841482.png",
+    "channelName": "Ten Cricket",
+    "position": 78,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1745304846950.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1727/output/index.mpd",
+    "widevine": {
+      "channel_id": "801c26dd-8035"
+    }
+  },
+  {
+    "id": "141000",
+    "title": "SRK TV",
+    "image": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005960095.png",
+    "contentType": "LIVE",
+    "genre": [
+      "Entertainment"
+    ],
+    "language": [
+      "Bengali"
+    ],
+    "provider": "DEFAULT",
+    "providerContentId": "201",
+    "newImage": "",
+    "newBackgroundImage": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005940155.png",
+    "channelName": "SRK TV",
+    "position": 79,
+    "transparentImageUrl": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005960095.png",
+    "productPackName": "Companion Pack Akash Standard",
+    "searchDictionary": false,
+    "media_url": "https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8",
+    "widevine": null
+  }
+]
