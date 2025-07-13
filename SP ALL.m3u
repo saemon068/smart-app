@@ -157,7 +157,7 @@ https://www.xfireflix.fun/tatatv.m3u8?id=12104
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png" group-title="Sports", PTV Sports
 https://www.xfireflix.fun/tatatv.m3u8?id=12172
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/c/cc/SS1HD.jpg/revision/latest?cb=20240313194654" group-title="Sports",Star Sports 1 Hd
-https://bdix.xfireflix.fun/stream.m3u8?id=323039
+http://drk.yasarpro.com:80/play/live.php?mac=00:1A:79:A6:7F:86&stream=39965&extension=m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/ac/Star_Sports_2.jpg/revision/latest?cb=20191214232359" group-title="Xfireflix",Star Sports 2
 https://bdix.xfireflix.fun/stream.m3u8?id=3538
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/A_Sports_Logo.png" group-title="Sports", A Sports
@@ -175,7 +175,7 @@ https://bdix.xfireflix.fun/stream.m3u8?id=323032
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/78/Jalsha-movie.png/revision/latest?cb=20190806073643" group-title="Xfireflix", Jalsha Movie Xfireflix 
 https://bdix.xfireflix.fun/stream.m3u8?id=323035
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLKRWpYF1LQ5Fbwc5R4mDIDWPMMu7yIU8OEw&s" group-title="Xfireflix",Star Jalsha
-https://bdix.xfireflix.fun/stream.m3u8?id=323036
+https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 
 #EXTINF:-1 tvg-name="Zee Bangla HD" tvg-logo="http://kst.moonplex.net/iptv/img/logo/zee-bangla.jpg" group-title="Indian",Zee Bangla HD
 https://bdix.xfireflix.fun/stream.m3u8?id=323038
