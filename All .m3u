@@ -6,6 +6,8 @@
 #EXTINF:-1 tvg-id="58133" group-title="SonY LIV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",SonY LIV
 https://dai.google.com/ssai/event/pJ6I3XzMQfWtBeAnNd8e5w/master.m3u8
 
+#EXTINF:-1 tvg-id="58133" group-title="Toffee" tvg-logo="https://repository-images.githubusercontent.com/707653140/2b96ff1b-1dcf-4dac-b61f-1a50da0f9f25",Toffee
+http://103.73.107.122:3255/TSportsHD/index.m3u8
 
 
 #EXTINF:-1 tvg-id="58133" group-title="sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
