@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>অবিরাম টিভি - প্রিমিয়াম বিনোদন, বিনামূল্যে</title>
+    <title>অবিরাম টিভি - আপনার বিনোদনের নতুন ঠিকানা</title>
     
-    <!-- Google Fonts: Poppins (for a modern look) -->
+    <!-- Google Fonts: Poppins & Hind Siliguri -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- Color Palette & Variables --- */
+        /* --- Light Theme Color Palette & Variables --- */
         :root {
             --primary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             --primary-color-start: #6a11cb;
             --primary-color-end: #2575fc;
-            --dark-bg: #0d1117; /* Rich black/navy like GitHub */
-            --card-bg: #161b22;
-            --light-text: #f0f6fc;
-            --gray-text: #8b949e;
-            --border-color: rgba(255, 255, 255, 0.1);
+            --light-bg: #f8f9fa; /* Soft off-white */
+            --card-bg: #ffffff;
+            --dark-text: #212529; /* Rich dark gray */
+            --gray-text: #6c757d;
+            --border-color: #dee2e6;
         }
 
         /* --- General Styles --- */
@@ -32,10 +32,10 @@
 
         body {
             font-family: 'Hind Siliguri', 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
+            background-color: var(--light-bg);
+            color: var(--dark-text);
             line-height: 1.8;
-            overflow-x: hidden; /* Prevents horizontal scroll */
+            overflow-x: hidden;
         }
 
         .container {
@@ -49,6 +49,7 @@
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 1rem;
+            color: var(--dark-text);
         }
 
         h1 { font-size: 3.5rem; }
@@ -85,12 +86,12 @@
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: var(--dark-bg);
+            background: var(--light-bg);
             padding: 2rem;
             overflow: hidden;
         }
@@ -99,7 +100,8 @@
             content: '';
             position: absolute;
             border-radius: 50%;
-            filter: blur(150px);
+            filter: blur(120px);
+            opacity: 0.4;
         }
         .hero::before {
             width: 400px; height: 400px;
@@ -126,18 +128,17 @@
             gap: 2rem;
         }
         .feature-card {
-            background: rgba(22, 27, 34, 0.5); /* Glassmorphism effect */
-            backdrop-filter: blur(10px);
+            background: var(--card-bg);
             padding: 2.5rem 2rem;
             text-align: center;
             border-radius: 15px;
             border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
         }
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: var(--primary-color-end);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
         }
         .feature-card .icon {
             font-size: 3rem;
@@ -147,7 +148,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .feature-card h3 { color: var(--light-text); font-size: 1.4rem; }
+        .feature-card h3 { color: var(--dark-text); font-size: 1.4rem; }
         .feature-card p { color: var(--gray-text); }
 
         /* --- Installation Section --- */
@@ -187,11 +188,10 @@
         }
         .phone-mockup {
             width: 300px;
-            background: #111;
-            border: 10px solid #000;
-            border-radius: 40px;
             padding: 10px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            background: #f8f9fa;
+            border-radius: 40px;
             transition: transform 0.3s ease;
         }
         .phone-mockup:hover { transform: scale(1.05) rotate(2deg); }
@@ -237,7 +237,7 @@
             text-align: center;
             border-radius: 20px;
             padding: 4rem 2rem;
-            margin: 0 2rem; /* Add margin to not touch screen edges */
+            margin: 0 2rem;
         }
         .final-cta h2, .final-cta p { color: #fff; }
 
@@ -330,13 +330,13 @@
             <div class="screenshot-gallery">
                 <!-- আপনার অ্যাপের স্ক্রিনশট এখানে দিন -->
                 <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/161b22/ffffff?text=Home+Page" alt="App Screenshot 1">
+                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Home+Page" alt="App Screenshot 1">
                 </div>
                 <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/161b22/ffffff?text=Live+TV" alt="App Screenshot 2">
+                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Live+TV" alt="App Screenshot 2">
                 </div>
                 <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/161b22/ffffff?text=Movie+List" alt="App Screenshot 3">
+                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Movie+List" alt="App Screenshot 3">
                 </div>
             </div>
         </section>
