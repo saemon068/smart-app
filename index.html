@@ -191,7 +191,6 @@
             .hero-text { order: 2; }
             .hero-image { order: 1; margin-bottom: 2rem; }
             h1 { font-size: 2.8rem; }
-            /* FIXED HERE */
             .floating-phone {
                 width: 90%;
                 max-width: 400px;
@@ -371,5 +370,77 @@
             },
         });
     </script>
+    
+    <!-- ====================================================== -->
+    <!-- ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT START -->
+    <!-- ====================================================== -->
+    <script>
+        (function() {
+            // এই ফাংশনটি ডেভেলপার টুলস সনাক্ত হলে সক্রিয় হবে
+            const blockInspection = () => {
+                // একটি বার্তা দেখানোর জন্য পেজের কন্টেন্ট পরিবর্তন করুন
+                document.body.innerHTML = `
+                    <div style="background-color: #000; color: #ff4d4d; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif;">
+                        <h1 style="font-size: 3rem; margin-bottom: 20px;">ACCESS DENIED</h1>
+                        <p style="font-size: 1.2rem;">This website is protected. Please close the developer tools.</p>
+                    </div>
+                `;
+
+                // ক্রমাগত ডিবাগার চালু রেখে টুলস ফ্রিজ করে দিন
+                setInterval(() => {
+                    debugger;
+                }, 50);
+            };
+
+            // কীবোর্ড শর্টকাট ব্লক করুন
+            document.addEventListener('keydown', (e) => {
+                // F12 key
+                if (e.key === "F12" || e.keyCode === 123) {
+                    e.preventDefault();
+                    blockInspection();
+                }
+                // Ctrl+Shift+I
+                if (e.ctrlKey && e.shiftKey && e.key === "I") {
+                    e.preventDefault();
+                    blockInspection();
+                }
+                // Ctrl+Shift+J
+                if (e.ctrlKey && e.shiftKey && e.key === "J") {
+                    e.preventDefault();
+                    blockInspection();
+                }
+                // Ctrl+U
+                if (e.ctrlKey && e.key === "U") {
+                    e.preventDefault();
+                    blockInspection();
+                }
+            });
+
+            // ডান-ক্লিক নিষ্ক্রিয় করুন
+            document.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+            });
+
+            // একটি নির্দিষ্ট সময় অন্তর ডেভেলপার টুলস খোলা আছে কিনা তা পরীক্ষা করুন
+            const devToolsCheck = () => {
+                const threshold = 160;
+                // যদি উইন্ডোর বাইরের এবং ভেতরের প্রস্থ বা উচ্চতার মধ্যে পার্থক্য বেশি হয়, তার মানে টুলস খোলা
+                if (
+                    (window.outerWidth - window.innerWidth) > threshold ||
+                    (window.outerHeight - window.innerHeight) > threshold
+                ) {
+                    blockInspection();
+                }
+            };
+
+            // প্রতি ৫০০ মিলিসেকেন্ডে চেক করুন
+            setInterval(devToolsCheck, 500);
+
+        })();
+    </script>
+    <!-- ====================================================== -->
+    <!-- ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT END -->
+    <!-- ====================================================== -->
+
 </body>
 </html>
