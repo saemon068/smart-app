@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>অবিরাম টিভি - আপনার বিনোদনের নতুন ঠিকানা</title>
+    <title>অবিরাম টিভি - বিনোদনের নতুন দিগন্ত</title>
     
     <!-- Google Fonts: Poppins & Hind Siliguri -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,24 +12,25 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- SwiperJS for Screenshot Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
-        /* --- Light Theme Color Palette & Variables --- */
         :root {
-            --primary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            --primary-color-start: #6a11cb;
-            --primary-color-end: #2575fc;
-            --light-bg: #f8f9fa; /* Soft off-white */
+            --primary-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #00c6ff 100%);
+            --primary-color: #0072ff;
+            --light-bg: #ffffff;
+            --section-bg: #f7faff;
             --card-bg: #ffffff;
-            --dark-text: #212529; /* Rich dark gray */
-            --gray-text: #6c757d;
-            --border-color: #dee2e6;
+            --dark-text: #1a202c;
+            --gray-text: #5a677d;
+            --border-color: #e2e8f0;
         }
 
-        /* --- General Styles --- */
+        /* --- General & Animation --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Hind Siliguri', 'Poppins', sans-serif;
             background-color: var(--light-bg);
@@ -37,225 +38,159 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-            color: var(--dark-text);
-        }
-
-        h1 { font-size: 3.5rem; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 5rem 1.5rem; }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+        h1 { font-size: 3.2rem; }
         h2 { font-size: 2.5rem; text-align: center; margin-bottom: 4rem; }
         
-        /* --- Gradient Text Style --- */
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         .gradient-text {
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient-flow 8s ease infinite;
         }
+        
+        .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- Button Styles --- */
+        /* --- Button --- */
         .cta-button {
             display: inline-block;
             background-image: var(--primary-gradient);
             color: #fff;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            padding: 16px 35px;
+            font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(37, 117, 252, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 114, 255, 0.3);
             border: none;
+            background-size: 200% 200%;
+            animation: gradient-flow 8s ease infinite;
         }
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(106, 17, 203, 0.5);
-        }
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 12px 35px rgba(0, 114, 255, 0.4); }
 
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            min-height: 90vh;
+            padding: 6rem 1.5rem;
+            min-height: 95vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: var(--light-bg);
-            padding: 2rem;
-            overflow: hidden;
         }
-        /* Background decorative shapes */
-        .hero::before, .hero::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.4;
+        .hero-container { display: flex; align-items: center; gap: 3rem; width: 100%; }
+        .hero-text { flex: 1; text-align: left; }
+        .hero-text .subtitle { font-size: 1.2rem; margin: 1.5rem 0 2.5rem; color: var(--gray-text); }
+        .hero-image { flex: 1; display: flex; justify-content: center; }
+        .floating-phone {
+            width: 720px;
+            animation: float 6s ease-in-out infinite;
         }
-        .hero::before {
-            width: 400px; height: 400px;
-            background: var(--primary-color-start);
-            top: -100px; left: -100px;
-        }
-        .hero::after {
-            width: 300px; height: 300px;
-            background: var(--primary-color-end);
-            bottom: -50px; right: -50px;
-        }
-        .hero-content { z-index: 1; }
-        .hero-content .subtitle {
-            font-size: 1.3rem;
-            max-width: 650px;
-            margin: 1.5rem auto 3rem;
-            color: var(--gray-text);
-        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+        /* Wave Separator */
+        .wave-separator { position: relative; width: 100%; height: 100px; }
+        .wave-separator svg { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; }
 
         /* --- Features Section --- */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+        .features { background: var(--section-bg); padding-top: 8rem; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
         .feature-card {
             background: var(--card-bg);
             padding: 2.5rem 2rem;
             text-align: center;
-            border-radius: 15px;
+            border-radius: 20px;
             border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 114, 255, 0.1); }
         .feature-card .icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             display: inline-block;
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient-flow 8s ease infinite;
         }
-        .feature-card h3 { color: var(--dark-text); font-size: 1.4rem; }
-        .feature-card p { color: var(--gray-text); }
-
-        /* --- Installation Section --- */
-        .install-section { background: var(--card-bg); }
-        .install-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+        
+        /* --- How it Works Section --- */
+        .how-it-works { text-align: center; }
+        .steps-container { display: flex; justify-content: space-between; position: relative; margin-top: 5rem; }
+        .step { flex: 1; text-align: center; position: relative; z-index: 1; }
         .step-number {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             background: var(--primary-gradient);
-            color: #fff;
+            color: white;
             border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            display: flex;
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 20px rgba(37, 117, 252, 0.3);
-        }
-
-        /* --- Screenshots Section with Phone Mockup --- */
-        .screenshot-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            justify-items: center;
-        }
-        .phone-mockup {
-            width: 300px;
-            padding: 10px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            background: #f8f9fa;
-            border-radius: 40px;
-            transition: transform 0.3s ease;
-        }
-        .phone-mockup:hover { transform: scale(1.05) rotate(2deg); }
-        .phone-mockup img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 30px;
-        }
-
-        /* --- FAQ Section --- */
-        .faq-container { max-width: 800px; margin: 0 auto; }
-        .faq-item {
-            background-color: var(--card-bg);
             margin-bottom: 1rem;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
+            background-size: 200% 200%;
+            animation: gradient-flow 8s ease infinite;
         }
-        .faq-item summary {
-            font-size: 1.2rem;
-            font-weight: 600;
-            padding: 1.5rem;
-            cursor: pointer;
-            outline: none;
-            list-style: none;
-            position: relative;
-        }
-        .faq-item summary::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            float: right;
-            transition: transform 0.3s;
-            color: var(--primary-color-end);
-        }
-        .faq-item[open] summary::after { transform: rotate(180deg); }
-        .faq-item[open] summary { color: var(--primary-color-end); }
-        .faq-content { padding: 0 1.5rem 1.5rem; color: var(--gray-text); border-top: 1px solid var(--border-color); }
+        .steps-container::before { content: ''; position: absolute; top: 30px; left: 15%; right: 15%; height: 4px; background: var(--border-color); z-index: 0; }
+        
+        /* --- Screenshots Section (Swiper) --- */
+        .screenshots { background: var(--section-bg); padding-top: 8rem; }
+        .swiper-container { max-width: 1000px; padding: 2rem 0; }
+        .swiper-slide { display: flex; justify-content: center; align-items: center; }
+        .screenshot-mockup { width: 280px; transition: transform 0.4s; }
+        .swiper-slide-active .screenshot-mockup { transform: scale(1.15); }
+        .swiper-slide img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .swiper-button-next, .swiper-button-prev { color: var(--primary-color); }
+        .swiper-pagination-bullet-active { background: var(--primary-color); }
 
-        /* --- Final CTA Section --- */
+        /* --- FAQ --- */
+        .faq-item { background-color: var(--card-bg); margin-bottom: 1rem; border-radius: 10px; border: 1px solid var(--border-color); }
+        .faq-item summary { font-size: 1.1rem; font-weight: 600; padding: 1.5rem; cursor: pointer; outline: none; list-style: none; position: relative; }
+        .faq-item summary::after { content: '\2b'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: 1.5rem; transition: transform 0.3s; }
+        .faq-item[open] summary::after { transform: rotate(45deg); }
+        .faq-content { padding: 0 1.5rem 1.5rem; color: var(--gray-text); }
+        
+        /* --- Footer & Final CTA --- */
         .final-cta {
             background: var(--primary-gradient);
             text-align: center;
             border-radius: 20px;
             padding: 4rem 2rem;
-            margin: 0 2rem;
+            color: white;
+            background-size: 200% 200%;
+            animation: gradient-flow 8s ease infinite;
         }
-        .final-cta h2, .final-cta p { color: #fff; }
+        .final-cta h2, .final-cta p { color: white; }
+        footer { text-align: center; padding: 3rem 1rem; color: var(--gray-text); }
 
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            margin-top: 3rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--gray-text);
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-text { order: 2; }
+            .hero-image { order: 1; margin-bottom: 2rem; }
+            h1 { font-size: 2.8rem; }
+            /* FIXED HERE */
+            .floating-phone {
+                width: 90%;
+                max-width: 400px;
+            }
         }
-        
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
+            .steps-container { flex-direction: column; gap: 3rem; }
+            .steps-container::before { display: none; }
+            h1 { font-size: 2.2rem; }
             h2 { font-size: 2rem; }
-            .container { padding: 4rem 1.5rem; }
-            .final-cta { margin: 0 1rem; }
         }
     </style>
 </head>
@@ -263,112 +198,113 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1 class="gradient-text">অবিরাম বিনোদন, এখন আপনার হাতের মুঠোয়</h1>
-            <p class="subtitle">অবিরাম টিভি অ্যাপের মাধ্যমে উপভোগ করুন লাইভ টিভি চ্যানেল, সর্বশেষ মুভি এবং ওয়েব সিরিজের বিশাল সংগ্রহ। প্রিমিয়াম এক্সপেরিয়েন্স, সম্পূর্ণ বিনামূল্যে!</p>
-            <a href="https://github.com/saemon068/smart-app/raw/refs/heads/main/UPDATE/%E0%A6%85%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%AE%20%E0%A6%9F%E0%A6%BF%E0%A6%AD%E0%A6%BF%20.apk" class="cta-button" download>
-                <i class="fas fa-download"></i> এখুনি ডাউনলোড করুন
-            </a>
+        <div class="hero-container">
+            <div class="hero-text reveal">
+                <h1>অবিরাম টিভি: <span class="gradient-text">বিনোদনের নতুন দিগন্ত</span></h1>
+                <p class="subtitle">লাইভ টিভির জগতে স্বাগতম। আপনার বিনোদনের সেরা ঠিকানা, সম্পূর্ণ বিনামূল্যে।</p>
+                <a href="https://github.com/saemon068/smart-app/raw/refs/heads/main/UPDATE/%E0%A6%85%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%AE%20%E0%A6%9F%E0%A6%BF%E0%A6%AD%E0%A6%BF%20.apk" class="cta-button" download>
+                    <i class="fas fa-download"></i> এখুনি ডাউনলোড করুন
+                </a>
+            </div>
+            <div class="hero-image reveal">
+                <img src="https://raw.githubusercontent.com/saemon068/smart-app/refs/heads/main/UPDATE/Generated_Image_September_14__2025_-_10_02PM-removebg-preview.png" alt="অবিরাম টিভি অ্যাপ" class="floating-phone">
+            </div>
         </div>
     </header>
 
+    <!-- Wave Separator with Animated Gradient -->
+    <div class="wave-separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+                <linearGradient id="wave-gradient" x1="-100%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00c6ff;" />
+                    <stop offset="100%" style="stop-color:#0072ff;" />
+                    <animateTransform attributeName="transform" type="translate" from="0,0" to="1440,0" dur="8s" repeatCount="indefinite" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#wave-gradient)" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,208C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
     <main>
         <!-- Features Section -->
-        <section id="features" class="container">
-            <h2 class="gradient-text">কেন অবিরাম টিভি সেরা?</h2>
+        <section id="features" class="features container">
+            <h2 class="gradient-text reveal">কেন অবিরাম টিভি অন্যদের চেয়ে আলাদা?</h2>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-satellite-dish"></i></div>
-                    <h3>লাইভ টিভি চ্যানেল</h3>
-                    <p>দেশি-বিদেশি অসংখ্য চ্যানেল দেখুন বাফারিং ছাড়াই, ক্রিস্টাল ক্লিয়ার কোয়ালিটিতে।</p>
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="icon"><i class="fas fa-satellite-dish"></i></div><h3>লাইভ স্ট্রিমিং</h3><p>বাফারিং ছাড়াই উপভোগ করুন আপনার প্রিয় সব টিভি চ্যানেল, সম্পূর্ণ লাইভ।</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-clapperboard"></i></div>
-                    <h3>বিশাল মুভি ও সিরিজ</h3>
-                    <p>হাজারো নতুন ও ক্লাসিক মুভি এবং ওয়েব সিরিজের এক বিশাল লাইব্রেরি, সব আপনার জন্য।</p>
+                
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="icon"><i class="fas fa-star"></i></div><h3>এইচডি কোয়ালিটি</h3><p>ক্রিস্টাল ক্লিয়ার ছবি এবং সাউন্ড কোয়ালিটিতে সেরা অভিজ্ঞতা নিন।</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-gem"></i></div>
-                    <h3>প্রিমিয়াম কোয়ালিটি</h3>
-                    <p>ফুল এইচডি স্ট্রিমিং এবং ডলবি সাউন্ড কোয়ালিটিতে সেরা বিনোদনের অভিজ্ঞতা নিন।</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-magic-wand-sparkles"></i></div>
-                    <h3>সহজ ও সুন্দর ইন্টারফেস</h3>
-                    <p>আধুনিক ডিজাইন ও সহজ নেভিগেশন আপনার পছন্দের কন্টেন্ট খুঁজে পাওয়াকে করবে আনন্দদায়ক।</p>
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="icon"><i class="fas fa-bolt"></i></div><h3>দ্রুত ও সহজ</h3><p>আমাদের অ্যাপ অত্যন্ত দ্রুত এবং এর ইউজার ইন্টারফেস ব্যবহার করা খুবই সহজ।</p>
                 </div>
             </div>
         </section>
 
-        <!-- How to Install Section -->
-        <section id="install" class="install-section">
-            <div class="container">
-                <h2 class="gradient-text">মাত্র ৩টি সহজ ধাপে ইন্সটল করুন</h2>
-                <div class="install-steps">
-                    <div class="step">
-                        <div class="step-number">১</div>
-                        <h3>ডাউনলোড করুন</h3>
-                        <p>এই ওয়েবসাইট থেকে 'ডাউনলোড' বাটনে ক্লিক করে লেটেস্ট APK ফাইলটি নামিয়ে নিন।</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">২</div>
-                        <h3>পারমিশন দিন</h3>
-                        <p>ফোনের Security সেটিংসে গিয়ে 'Install from Unknown Sources' অপশনটি চালু করুন।</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">৩</div>
-                        <h3>ইন্সটল ও উপভোগ</h3>
-                        <p>ডাউনলোড করা ফাইলে ক্লিক করে ইন্সটল করুন এবং প্রবেশ করুন বিনোদনের নতুন জগতে!</p>
-                    </div>
+        <!-- How it Works Section -->
+        <section id="install" class="how-it-works container">
+            <h2 class="gradient-text reveal">শুরু করুন মাত্র ৩টি ধাপে</h2>
+            <div class="steps-container">
+                <div class="step reveal" style="transition-delay: 0.1s;">
+                    <div class="step-number">১</div><h3>ডাউনলোড</h3><p>আমাদের ওয়েবসাইট থেকে নিরাপদ APK ফাইলটি ডাউনলোড করুন।</p>
+                </div>
+                <div class="step reveal" style="transition-delay: 0.3s;">
+                    <div class="step-number">২</div><h3>পারমিশন</h3><p>ফোনের সেটিংসে গিয়ে 'Unknown Sources' থেকে ইন্সটলের অনুমতি দিন।</p>
+                </div>
+                <div class="step reveal" style="transition-delay: 0.5s;">
+                    <div class="step-number">৩</div><h3>উপভোগ</h3><p>অ্যাপটি ইন্সটল করুন এবং প্রবেশ করুন বিনোদনের অফুরন্ত জগতে।</p>
                 </div>
             </div>
         </section>
 
         <!-- Screenshots Section -->
-        <section id="screenshots" class="container">
-            <h2 class="gradient-text">অ্যাপটির এক ঝলক</h2>
-            <div class="screenshot-gallery">
-                <!-- আপনার অ্যাপের স্ক্রিনশট এখানে দিন -->
-                <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Home+Page" alt="App Screenshot 1">
-                </div>
-                <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Live+TV" alt="App Screenshot 2">
-                </div>
-                <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/400x800/ffffff/000000?text=Movie+List" alt="App Screenshot 3">
-                </div>
+        <section id="screenshots" class="screenshots">
+            <div class="wave-separator" style="transform: rotate(180deg);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,208C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
-        </section>
-        
-        <!-- FAQ Section -->
-        <section id="faq" class="container">
-            <h2 class="gradient-text">সাধারণ জিজ্ঞাসাসমূহ</h2>
-            <div class="faq-container">
-                <details class="faq-item">
-                    <summary>অবিরাম টিভি অ্যাপটি কি সম্পূর্ণ বিনামূল্যে?</summary>
-                    <div class="faq-content">
-                        <p>হ্যাঁ, আমাদের অ্যাপটি এবং এর সকল কন্টেন্ট সম্পূর্ণ বিনামূল্যে উপভোগ করা যাবে। কোনো লুকানো চার্জ নেই।</p>
+            <div class="container reveal">
+                <h2 class="gradient-text">অ্যাপটির ভেতরের জগৎ</h2>
+                <div class="swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- আপনার অ্যাপের ৩-৪টি সুন্দর স্ক্রিনশট এখানে দিন -->
+                        <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-40-48-326_com.obiram.tv.jpg?raw=true" alt="App Screenshot 1"></div></div>
+                        <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-05-912_com.obiram.tv.jpg?raw=true" alt="App Screenshot 2"></div></div>
+                        <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-13-215_com.obiram.tv.jpg?raw=true" alt="App Screenshot 3"></div></div>
+                        <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-21-660_com.obiram.tv.jpg?raw=true" alt="App Screenshot 4"></div></div>
                     </div>
-                </details>
-                <details class="faq-item">
-                    <summary>এই অ্যাপটি ব্যবহার করা কি নিরাপদ?</summary>
-                    <div class="faq-content">
-                        <p>অবশ্যই। আমাদের অ্যাপটি ১০০% নিরাপদ। আমরা কোনো ক্ষতিকর কোড বা ভাইরাস ব্যবহার করি না এবং আপনার ব্যক্তিগত তথ্যের সুরক্ষা নিশ্চিত করি।</p>
-                    </div>
-                </details>
-                <details class="faq-item">
-                    <summary>অ্যাপটি কেন গুগল প্লে-স্টোরে নেই?</summary>
-                    <div class="faq-content">
-                        <p>কিছু নীতিমালার কারণে অ্যাপটি বর্তমানে প্লে-স্টোরে নেই। তবে আমরা এটি আনার জন্য কাজ করছি। আপাতত, আমাদের অফিসিয়াল ওয়েবসাইটই ডাউনলোডের একমাত্র নিরাপদ উৎস।</p>
-                    </div>
-                </details>
+                    <!-- Navigation & Pagination -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section class="container">
-             <div class="final-cta">
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <h2 class="gradient-text reveal">আপনার মনে প্রশ্ন আছে?</h2>
+            <div class="faq-container reveal">
+                <details class="faq-item">
+                    <summary>অবিরাম টিভি অ্যাপটি কি সম্পূর্ণ বিনামূল্যে?</summary>
+                    <div class="faq-content"><p>হ্যাঁ, আমাদের অ্যাপটি এবং এর সকল কন্টেন্ট উপভোগ করার জন্য কোনো টাকা লাগে না।</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>এই অ্যাপটি ব্যবহার করা কি নিরাপদ?</summary>
+                    <div class="faq-content"><p>অবশ্যই। আমাদের অ্যাপটি ১০০% নিরাপদ এবং আপনার ব্যক্তিগত তথ্যের সুরক্ষা নিশ্চিত করে।</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>অ্যাপটি কেন গুগল প্লে-স্টোরে নেই?</summary>
+                    <div class="faq-content"><p>কিছু নীতিমালার কারণে অ্যাপটি বর্তমানে প্লে-স্টোরে নেই। আপাতত, আমাদের অফিসিয়াল ওয়েবসাইটই ডাউনলোডের একমাত্র নিরাপদ উৎস।</p></div>
+                </details>
+            </div>
+        </section>
+        
+        <!-- Final CTA -->
+        <section class="container reveal">
+            <div class="final-cta">
                 <h2>আর অপেক্ষা কেন?</h2>
                 <p style="max-width: 600px; margin: 1rem auto 2rem;">আজই ডাউনলোড করুন অবিরাম টিভি এবং আপনার বিনোদনের অভিজ্ঞতাকে নিয়ে যান এক নতুন উচ্চতায়।</p>
                 <a href="https://github.com/saemon068/smart-app/raw/refs/heads/main/UPDATE/%E0%A6%85%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%AE%20%E0%A6%9F%E0%A6%BF%E0%A6%AD%E0%A6%BF%20.apk" class="cta-button" download>
@@ -379,9 +315,50 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; ২০২৪ অবিরাম টিভি। সর্বস্বত্ব সংরক্ষিত।</p>
-    </footer>
+    <footer><p>&copy; ২০২৪ অবিরাম টিভি। সর্বস্বত্ব সংরক্ষিত।</p></footer>
 
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // --- Scroll Reveal Animation ---
+        function revealSections() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections(); // Initial check
+
+        // --- Swiper Slider Initialization ---
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 80,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
