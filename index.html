@@ -244,6 +244,7 @@
                 <div class="feature-card reveal" style="transition-delay: 0.1s;">
                     <div class="icon"><i class="fas fa-satellite-dish"></i></div><h3>লাইভ স্ট্রিমিং</h3><p>বাফারিং ছাড়াই উপভোগ করুন আপনার প্রিয় সব টিভি চ্যানেল, সম্পূর্ণ লাইভ।</p>
                 </div>
+                
                 <div class="feature-card reveal" style="transition-delay: 0.3s;">
                     <div class="icon"><i class="fas fa-star"></i></div><h3>এইচডি কোয়ালিটি</h3><p>ক্রিস্টাল ক্লিয়ার ছবি এবং সাউন্ড কোয়ালিটিতে সেরা অভিজ্ঞতা নিন।</p>
                 </div>
@@ -278,6 +279,7 @@
                 <h2 class="gradient-text">অ্যাপটির ভেতরের জগৎ</h2>
                 <div class="swiper swiper-container">
                     <div class="swiper-wrapper">
+                        <!-- আপনার অ্যাপের ৩-৪টি সুন্দর স্ক্রিনশট এখানে দিন -->
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-40-48-326_com.obiram.tv.jpg?raw=true" alt="App Screenshot 1"></div></div>
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-05-912_com.obiram.tv.jpg?raw=true" alt="App Screenshot 2"></div></div>
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-13-215_com.obiram.tv.jpg?raw=true" alt="App Screenshot 3"></div></div>
@@ -370,80 +372,74 @@
     </script>
     
     <!-- ====================================================== -->
-    <!-- ADVANCED ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT START -->
+    <!-- ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT START -->
     <!-- ====================================================== -->
     <script>
         (function() {
-            'use strict';
+            // এই ফাংশনটি ডেভেলপার টুলস সনাক্ত হলে সক্রিয় হবে
+            const blockInspection = () => {
+                // একটি বার্তা দেখানোর জন্য পেজের কন্টেন্ট পরিবর্তন করুন
+                document.body.innerHTML = `
+                    <div style="background-color: #000; color: #ff4d4d; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif;">
+                        <h1 style="font-size: 3rem; margin-bottom: 20px;">ACCESS DENIED</h1>
+                        <p style="font-size: 1.2rem;">This website is protected. Please close the developer tools.</p>
+                    </div>
+                `;
 
-            // যখন Dev Tools সনাক্ত হবে, তখন এই ফাংশনটি কাজ করবে
-            const triggerPayload = () => {
-                // ক্রমাগত ডিবাগার চালু রেখে ব্রাউজারকে ব্যস্ত রাখা হবে
+                // ক্রমাগত ডিবাগার চালু রেখে টুলস ফ্রিজ করে দিন
                 setInterval(() => {
                     debugger;
                 }, 50);
-
-                // **সবচেয়ে গুরুত্বপূর্ণ অংশ:** পুরো HTML ডকুমেন্ট মুছে ফেলা হচ্ছে
-                // এর ফলে "Elements" ট্যাবে আর কোনো কোড দেখা যাবে না
-                document.documentElement.innerHTML = `
-                    <head>
-                        <title>ACCESS DENIED</title>
-                        <style>
-                            body { 
-                                background-color: #000; color: #ff3838; font-family: 'Poppins', sans-serif; 
-                                display: flex; flex-direction: column; justify-content: center; align-items: center; 
-                                height: 100vh; margin: 0; text-align: center; padding: 20px;
-                            }
-                            h1 { font-size: 2.5rem; text-shadow: 0 0 10px #ff3838; }
-                            p { font-size: 1.2rem; }
-                        </style>
-                    </head>
-                    <body>
-                        <h1>SECURITY ALERT</h1>
-                        <p>Developer tools are not permitted on this site. Please close them now.</p>
-                    </body>
-                `;
             };
 
-            // **পদ্ধতি ১: কীবোর্ড শর্টকাট ব্লক করা**
-            document.addEventListener('keydown', e => {
-                if (
-                    e.key === "F12" || e.keyCode === 123 ||
-                    (e.ctrlKey && e.shiftKey && (e.key === "I" || e.keyCode === 73)) ||
-                    (e.ctrlKey && e.shiftKey && (e.key === "J" || e.keyCode === 74)) ||
-                    (e.ctrlKey && (e.key === "U" || e.keyCode === 85))
-                ) {
+            // কীবোর্ড শর্টকাট ব্লক করুন
+            document.addEventListener('keydown', (e) => {
+                // F12 key
+                if (e.key === "F12" || e.keyCode === 123) {
                     e.preventDefault();
-                    triggerPayload();
+                    blockInspection();
+                }
+                // Ctrl+Shift+I
+                if (e.ctrlKey && e.shiftKey && e.key === "I") {
+                    e.preventDefault();
+                    blockInspection();
+                }
+                // Ctrl+Shift+J
+                if (e.ctrlKey && e.shiftKey && e.key === "J") {
+                    e.preventDefault();
+                    blockInspection();
+                }
+                // Ctrl+U
+                if (e.ctrlKey && e.key === "U") {
+                    e.preventDefault();
+                    blockInspection();
                 }
             });
 
-            // **পদ্ধতি ২: ডান-ক্লিক নিষ্ক্রিয় করা**
-            document.addEventListener('contextmenu', e => {
+            // ডান-ক্লিক নিষ্ক্রিয় করুন
+            document.addEventListener('contextmenu', (e) => {
                 e.preventDefault();
             });
 
-            // **পদ্ধতি ৩: ডিবাগার ট্র্যাপ (Debugger Trap)**
-            // এই ফাংশনটি একটি নির্দিষ্ট সময় পর পর চলবে এবং Dev Tools খোলা আছে কিনা তা পরীক্ষা করবে।
-            const checkDevTools = () => {
-                const startTime = performance.now();
-                debugger; 
-                const endTime = performance.now();
-                const elapsedTime = endTime - startTime;
-
-                // যদি সময় ১০০ মিলিসেকেন্ডের বেশি লাগে, তার মানে Dev Tools খোলা হয়েছে।
-                if (elapsedTime > 100) {
-                    triggerPayload();
+            // একটি নির্দিষ্ট সময় অন্তর ডেভেলপার টুলস খোলা আছে কিনা তা পরীক্ষা করুন
+            const devToolsCheck = () => {
+                const threshold = 160;
+                // যদি উইন্ডোর বাইরের এবং ভেতরের প্রস্থ বা উচ্চতার মধ্যে পার্থক্য বেশি হয়, তার মানে টুলস খোলা
+                if (
+                    (window.outerWidth - window.innerWidth) > threshold ||
+                    (window.outerHeight - window.innerHeight) > threshold
+                ) {
+                    blockInspection();
                 }
             };
-            
-            // প্রতি ৫০০ মিলিসেকেন্ড পর পর চেক করা হবে
-            setInterval(checkDevTools, 500);
+
+            // প্রতি ৫০০ মিলিসেকেন্ডে চেক করুন
+            setInterval(devToolsCheck, 500);
 
         })();
     </script>
     <!-- ====================================================== -->
-    <!-- ADVANCED ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT END -->
+    <!-- ANTI-INSPECTION & ANTI-DEBUGGING SCRIPT END -->
     <!-- ====================================================== -->
 
 </body>
