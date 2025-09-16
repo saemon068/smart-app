@@ -7,6 +7,8 @@
 
 #EXTINF:-1 tvg-id="58133" group-title="Toffee" tvg-logo="https://repository-images.githubusercontent.com/707653140/2b96ff1b-1dcf-4dac-b61f-1a50da0f9f25",Toffee
 http://103.73.107.122:3255/TSportsHD/index.m3u8
+
+#EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
 http://tv.bdiptv.store/live/restreauuX58y/refstream/218.m3u8
 
 
