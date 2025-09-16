@@ -3,9 +3,8 @@
 # Generated on: 2025-08-08 12:27:37
 # User: 
 
-#EXTINF:-1 tvg-id="58133" group-title="SonY LIV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",SonY LIV
-https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/ott_navigator.m3u
-
+#EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
+https://xfireflix.fun/Ayna/match.php?id=fc95d30e-5323-4c12-bb38-7a1e3f04acc2&e=.m3u8
 #EXTINF:-1 tvg-id="58133" group-title="Toffee" tvg-logo="https://repository-images.githubusercontent.com/707653140/2b96ff1b-1dcf-4dac-b61f-1a50da0f9f25",Toffee
 http://103.73.107.122:3255/TSportsHD/index.m3u8
 
