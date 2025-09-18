@@ -16,14 +16,14 @@ http://tv.bdiptv.store/live/restreauuX58y/refstream/218.m3u8
 https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u
 
 
-#EXTINF:-1 tvg-id="4" group-title="AYNA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
-https://www.xfireflix.fun/Ayna/playlist.m3u/
-
 
 #EXTINF:-1 tvg-id="5" group-title="xfireflix" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",xfireflix
 https://ottbangla-by-xfireflix.pages.dev/playlist.m3u
 
 
+
+#EXTINF:-1 tvg-id="4" group-title="AYNA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
+https://www.xfireflix.fun/Ayna/playlist.m3u/
 
 
 
