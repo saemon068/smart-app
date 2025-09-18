@@ -5,31 +5,27 @@
 
 
 
-#EXTINF:-1 tvg-id="1" group-title="Toffee" tvg-logo="https://repository-images.githubusercontent.com/707653140/2b96ff1b-1dcf-4dac-b61f-1a50da0f9f25",Toffee
+#EXTINF:-1 tvg-id="58133" group-title="Toffee" tvg-logo="https://repository-images.githubusercontent.com/707653140/2b96ff1b-1dcf-4dac-b61f-1a50da0f9f25",Toffee
 http://103.73.107.122:3255/TSportsHD/index.m3u8
 
-#EXTINF:-1 tvg-id="2" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
+#EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
 http://tv.bdiptv.store/live/restreauuX58y/refstream/218.m3u8
 
 
-#EXTINF:-1 tvg-id="3" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
+#EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
 https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u
 
-
-
-
-
-
-#EXTINF:-1 tvg-id="4" group-title="AYNA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
+#EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
 https://www.xfireflix.fun/Ayna/playlist.m3u
 
 
-
-
-#EXTINF:-1 tvg-id="5" group-title="xfireflix" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",xfireflix
+#EXTINF:-1 tvg-id="58133" group-title="xfireflix" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",xfireflix
 https://ottbangla-by-xfireflix.pages.dev/playlist.m3u
 
 
+
+#EXTINF:-1 tvg-id="58133" group-title="AYNA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
+https://raw.githubusercontent.com/abusaeeidx/Ayna-Playlists-free-Version/refs/heads/main/playlist.m3u
 
 
 
