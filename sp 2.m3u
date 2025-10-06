@@ -135,8 +135,6 @@ http://103.175.242.10:8080/sunbangla/index.m3u8
 http://103.175.242.10:8080/tsports1/index.m3u8
 #EXTINF:-1 group-title="By XFIRE FLIX" tvg-logo="http://103.175.242.10/assets/images/Zee%20Bangla1731406932.png",Zee Bangla
 http://103.175.242.10:8080/zeebangla/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/HelloPeopleTv4you/IPTV-Playlist/c245146cd178f9da3ce14ccfec5c68caf1373029/x-fire-flix.png" group-title="BY X fire Flix",X fire Flix
-https://raw.githunt.com/HelloPeopleTv4you/live/refs/heads/main/byxfireflix/BY-X-FIRE-FLIX.mp4
 #EXTINF:-1 tvg-id="596e39ca-a957-4029-bbc6-55e89dc5d4d4" tvg-name="RTV Islam" tvg-logo="https://s3.aynaott.com/storage/f71f649abc51984f09076ef6ee5c0d0c" group-title="Channels",RTV Islam
 https://tvsen6.aynaott.com/rtvislam/index.m3u8?e=1753741212&u=9a031201-22d8-4f7e-9516-7d246a8fedc3&token=820915601704c902427492f761871273
 #EXTINF:-1 tvg-id="63b750d3-73e9-4e8a-b04b-6c79bbcd4f13" tvg-name="ABC 7 Bay" tvg-logo="https://s3.aynaott.com/storage/95f5bd4eef3bf5b0ed0bc1d6953dfdd5" group-title="Channels",ABC 7 Bay
