@@ -9,7 +9,7 @@
 https://sonymtpristinenew.akamaized.net/hls/live/2119931/cricacc12409/ENG/std_lrh-800300010.m3u8?hdnea=exp=1758766313~acl=/*~id=87795466119465564496649231917159~hmac=2733db3ddc896f8c56d951ffbf6a5bd05e054c364f2427f5ef59d5354d9d77f9
 
 #EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
-http://tv.bdiptv.store/live/restreauuX58y/refstream/218.m3u8
+https://raw.githubusercontent.com/abusaeeidx/Mrgify-Tv/refs/heads/main/playlist.m3u
 
 
 #EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
