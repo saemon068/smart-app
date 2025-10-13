@@ -3,7 +3,7 @@ name: Auto Sync External M3U File
 on:
   # প্রতি ২০ মিনিট অন্তর এই ওয়ার্কফ্লোটি চলবে (UTC সময় অনুযায়ী)।
   schedule:
-    - cron: '*/20 * * * *' 
+    - cron: '*/05 * * * *' 
   # আপনি চাইলে GitHub ওয়েবপেজ থেকে ম্যানুয়ালিও এটি চালাতে পারবেন।
   workflow_dispatch:
 
