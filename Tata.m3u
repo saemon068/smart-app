@@ -2,7 +2,7 @@
 # Developed By: ABU SAEEiD × Rifaz
 # GitHub @abusaeeidx
 # IPTV Telegram Channels: @xfireflixbd
-# Last Updated: 2025-11-21 01:43 AM (BD Time)
+# Last Updated: 2025-11-21 01:54 AM (BD Time)
 # Disclaimer:
 # This tool does NOT host any content.
 # It aggregates publicly available data for informational purposes only.
@@ -10,12 +10,12 @@
 #==================================
 #EXTM3U
 
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/137588_5720_TWE-W_ATL-W_fc-web.jpg" group-title="Live Event", FC Twente Women vs Club Atletico de Madrid Femenino (UEFA Women's Champions League 2025-26)
-https://bd-mc-fdlive.fancode.com/mumbai/137588_english_hls_92c6dd934059069_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/The-RSM-Classic--old-match-card.png" group-title="Live Event", Featured Groups - Day 1 vs Sea Island Golf Club (The RSM Classic)
 https://bd-mc-fdlive.fancode.com/mumbai/138271_english_hls_20b7376b0731538_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/The-RSM-Classic--old-match-card.png" group-title="Live Event", World Feed - Day 1 vs Sea Island Golf Club (The RSM Classic)
 https://bd-mc-fdlive.fancode.com/mumbai/138270_english_hls_b108af771a22222_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/137588_5720_TWE-W_ATL-W_fc-web.jpg" group-title="Live Event", FC Twente Women vs Club Atletico de Madrid Femenino (UEFA Women's Champions League 2025-26)
+https://bd-mc-fdlive.fancode.com/mumbai/137588_english_hls_92c6dd934059069_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/xolazzofexo6ub8/boishakhi.png" group-title="Akash Go",BOISHAKHI TV
 https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 #EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/image534fa27d7683f33d.png" group-title="Akash Go",Ekushey TV
@@ -1696,7 +1696,5 @@ http://51.15.7.9:3141/ten5/index.m3u8
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-name="Duronto TV (720p)" group-title="Unknown",Duronto TV (720p)
 https://tvsen4.aynaott.com/durontotv/index.m3u8
-#EXTINF:-1 tvg-name="Boishakhi TV" group-title="Unknown",Boishakhi TV
-https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 #EXTINF:-1 tvg-name="Ekushey TV (480p)" group-title="Unknown",Ekushey TV (480p)
 https://ekusheyserver.com/etvlivesn.m3u8
