@@ -2,7 +2,7 @@
 # Developed By: ABU SAEEiD × Rifaz
 # GitHub @abusaeeidx
 # IPTV Telegram Channels: @xfireflixbd
-# Last Updated: 2025-11-21 11:46 AM (BD Time)
+# Last Updated: 2025-11-21 11:56 AM (BD Time)
 # Disclaimer:
 # This tool does NOT host any content.
 # It aggregates publicly available data for informational purposes only.
@@ -12,10 +12,10 @@
 
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/BAN-vs-IRE_old-match-card.png" group-title="Live Event", Bangladesh vs Ireland (Ireland tour of Bangladesh- 2025)
 https://bd-mc-fdlive.fancode.com/mumbai/138238_english_hls_3c279f8f2c58850_1ta-di_h264/index.m3u8
-#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/138088_5758_TL-W_PN-W_FC-Web.jpg" group-title="Live Event", Papua New Guinea Women vs Thailand Women (ICC Women's Emerging Nations Trophy- 2025)
-https://bd-mc-fdlive.fancode.com/mumbai/138088_english_hls_fb1abb342e94849_1ta-di_h264/index.m3u8
 #EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F1_Academy_Generic_Old_match-card.jpg" group-title="Live Event", Qualifying Session vs Las Vegas (F1 ACADEMY LAS VEGAS 2025)
 https://bd-mc-fdlive.fancode.com/mumbai/119137_english_hls_2d8eab606d56208_1ta-di_h264/index.m3u8
+#EXTINF:-1, tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/138088_5758_TL-W_PN-W_FC-Web.jpg" group-title="Live Event", Papua New Guinea Women vs Thailand Women (ICC Women's Emerging Nations Trophy- 2025)
+https://bd-mc-fdlive.fancode.com/mumbai/138088_english_hls_fb1abb342e94849_1ta-di_h264/index.m3u8
 #EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/xolazzofexo6ub8/boishakhi.png" group-title="Akash Go",BOISHAKHI TV
 https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 #EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/image534fa27d7683f33d.png" group-title="Akash Go",Ekushey TV
