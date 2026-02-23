@@ -6,7 +6,7 @@
 
 
 #EXTINF:-1 tvg-id="58133" group-title="SONY LIV" tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2021/12/sonyliv-logo-freelogovectors.net_-400x400.png",SONY LIV
-https://raw.githubusercontent.com/abusaeeidx/SonyLiv-Event-Auto-update/refs/heads/main/sonyliv.m3u
+http://161.248.38.40:8000/play/a07q/index.m3u8
 
 #EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
 https://raw.githubusercontent.com/saemon068/smart-app/refs/heads/main/Tata.m3u
