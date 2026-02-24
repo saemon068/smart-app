@@ -9,7 +9,7 @@
 https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://161.248.38.40:8000/play/a07q/index.m3u8
 
 #EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
-https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/refs/heads/main/AynaOTT.m3u
+https://tvsen7.aynascope.net/tsports-hd/index.m3u8?e=1771950836&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=04b583dd12cf21fd4757accae5d63fd2
 
 
 #EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
