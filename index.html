@@ -72,7 +72,9 @@
 
         /* --- Button --- */
         .cta-button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background-image: var(--primary-gradient);
             color: #fff;
             padding: 16px 35px;
@@ -86,7 +88,7 @@
             background-size: 200% 200%;
             animation: gradient-flow 8s ease infinite;
         }
-        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 12px 35px rgba(0, 114, 255, 0.4); }
+        .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 12px 35px rgba(0, 114, 255, 0.4); color: #fff;}
 
         /* --- Hero Section --- */
         .hero {
@@ -96,13 +98,15 @@
             display: flex;
             align-items: center;
         }
-        .hero-container { display: flex; align-items: center; gap: 3rem; width: 100%; }
+        .hero-container { display: flex; align-items: center; gap: 3rem; width: 100%; max-width: 1140px; margin: 0 auto; }
         .hero-text { flex: 1; text-align: left; }
         .hero-text .subtitle { font-size: 1.2rem; margin: 1.5rem 0 2.5rem; color: var(--gray-text); }
         .hero-image { flex: 1; display: flex; justify-content: center; }
         .floating-phone {
-            width: 720px;
+            width: 100%;
+            max-width: 500px;
             animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
         }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
@@ -110,21 +114,42 @@
         .wave-separator { position: relative; width: 100%; height: 100px; }
         .wave-separator svg { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; }
 
-        /* --- Features Section --- */
-        .features { background: var(--section-bg); padding-top: 8rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        /* --- UPDATED Features Section --- */
+        .features { background: var(--section-bg); padding-top: 6rem; padding-bottom: 4rem;}
+        .features-desc { text-align: center; color: var(--gray-text); font-size: 1.1rem; max-width: 700px; margin: -2rem auto 4rem; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+        
         .feature-card {
             background: var(--card-bg);
             padding: 2.5rem 2rem;
             text-align: center;
             border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 114, 255, 0.1); }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--primary-gradient);
+            transition: height 0.4s ease;
+            z-index: -1;
+        }
+        .feature-card:hover::before { height: 100%; opacity: 0.05; }
+        
+        .feature-card:hover { 
+            transform: translateY(-10px); 
+            border-color: rgba(0, 114, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 114, 255, 0.15); 
+        }
+        
         .feature-card .icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             display: inline-block;
             background: var(--primary-gradient);
@@ -133,57 +158,72 @@
             background-size: 200% 200%;
             animation: gradient-flow 8s ease infinite;
         }
+        .feature-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--dark-text); }
+        .feature-card p { color: var(--gray-text); font-size: 1rem; line-height: 1.6; }
         
         /* --- How it Works Section --- */
         .how-it-works { text-align: center; }
         .steps-container { display: flex; justify-content: space-between; position: relative; margin-top: 5rem; }
-        .step { flex: 1; text-align: center; position: relative; z-index: 1; }
+        .step { flex: 1; text-align: center; position: relative; z-index: 1; padding: 0 15px; }
         .step-number {
             font-size: 1.5rem;
             font-weight: 700;
             background: var(--primary-gradient);
             color: white;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background-size: 200% 200%;
             animation: gradient-flow 8s ease infinite;
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.3);
         }
-        .steps-container::before { content: ''; position: absolute; top: 30px; left: 15%; right: 15%; height: 4px; background: var(--border-color); z-index: 0; }
+        .step h3 { margin-bottom: 10px; }
+        .step p { color: var(--gray-text); }
+        .steps-container::before { content: ''; position: absolute; top: 32px; left: 15%; right: 15%; height: 3px; background: rgba(0, 114, 255, 0.2); z-index: 0; border-radius: 5px; }
         
         /* --- Screenshots Section (Swiper) --- */
-        .screenshots { background: var(--section-bg); padding-top: 8rem; }
-        .swiper-container { max-width: 1000px; padding: 2rem 0; }
+        .screenshots { background: var(--section-bg); padding-top: 5rem; }
+        .swiper-container { max-width: 1000px; padding: 3rem 0; }
         .swiper-slide { display: flex; justify-content: center; align-items: center; }
-        .screenshot-mockup { width: 280px; transition: transform 0.4s; }
-        .swiper-slide-active .screenshot-mockup { transform: scale(1.15); }
-        .swiper-slide img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .swiper-button-next, .swiper-button-prev { color: var(--primary-color); }
+        .screenshot-mockup { width: 260px; transition: transform 0.5s ease; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .swiper-slide-active .screenshot-mockup { transform: scale(1.15); box-shadow: 0 20px 40px rgba(0, 114, 255, 0.3); border: 3px solid #fff; }
+        .swiper-slide img { width: 100%; display: block; }
+        .swiper-button-next, .swiper-button-prev { color: var(--primary-color); background: rgba(255,255,255,0.8); width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 18px; font-weight: bold; }
         .swiper-pagination-bullet-active { background: var(--primary-color); }
 
         /* --- FAQ --- */
-        .faq-item { background-color: var(--card-bg); margin-bottom: 1rem; border-radius: 10px; border: 1px solid var(--border-color); }
+        .faq-item { background-color: var(--card-bg); margin-bottom: 1rem; border-radius: 10px; border: 1px solid var(--border-color); box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
         .faq-item summary { font-size: 1.1rem; font-weight: 600; padding: 1.5rem; cursor: pointer; outline: none; list-style: none; position: relative; }
-        .faq-item summary::after { content: '\2b'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: 1.5rem; transition: transform 0.3s; }
+        .faq-item summary::after { content: '\2b'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; right: 1.5rem; transition: transform 0.3s; color: var(--primary-color); }
         .faq-item[open] summary::after { transform: rotate(45deg); }
-        .faq-content { padding: 0 1.5rem 1.5rem; color: var(--gray-text); }
+        .faq-content { padding: 0 1.5rem 1.5rem; color: var(--gray-text); line-height: 1.7; }
         
         /* --- Footer & Final CTA --- */
         .final-cta {
             background: var(--primary-gradient);
             text-align: center;
-            border-radius: 20px;
-            padding: 4rem 2rem;
+            border-radius: 25px;
+            padding: 5rem 2rem;
             color: white;
             background-size: 200% 200%;
             animation: gradient-flow 8s ease infinite;
+            box-shadow: 0 20px 40px rgba(0, 114, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
-        .final-cta h2, .final-cta p { color: white; }
-        footer { text-align: center; padding: 3rem 1rem; color: var(--gray-text); }
+        .final-cta::before {
+            content: ''; position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;
+        }
+        .final-cta h2, .final-cta p { color: white; position: relative; z-index: 2; }
+        .final-cta .cta-button { background: #fff; color: var(--primary-color); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .final-cta .cta-button:hover { background: #f8f9fa; transform: translateY(-5px) scale(1.05); }
+        
+        footer { text-align: center; padding: 3rem 1rem; color: var(--gray-text); font-weight: 500; }
 
         /* --- Responsive --- */
         @media (max-width: 992px) {
@@ -191,16 +231,14 @@
             .hero-text { order: 2; }
             .hero-image { order: 1; margin-bottom: 2rem; }
             h1 { font-size: 2.8rem; }
-            .floating-phone {
-                width: 90%;
-                max-width: 400px;
-            }
         }
         @media (max-width: 768px) {
             .steps-container { flex-direction: column; gap: 3rem; }
             .steps-container::before { display: none; }
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 2rem; }
+            h1 { font-size: 2.3rem; line-height: 1.3; }
+            h2 { font-size: 2rem; margin-bottom: 2.5rem; }
+            .features-desc { margin-bottom: 3rem; }
+            .screenshot-mockup { width: 220px; }
         }
     </style>
 </head>
@@ -211,7 +249,7 @@
         <div class="hero-container">
             <div class="hero-text reveal">
                 <h1>অবিরাম টিভি: <span class="gradient-text">বিনোদনের নতুন দিগন্ত</span></h1>
-                <p class="subtitle">লাইভ টিভির জগতে স্বাগতম। আপনার বিনোদনের সেরা ঠিকানা, সম্পূর্ণ বিনামূল্যে।</p>
+                <p class="subtitle">লাইভ টিভির জগতে স্বাগতম। আপনার হাতের মুঠোয় দেশি-বিদেশি স্পোর্টস, নিউজ এবং বিনোদন চ্যানেল সম্পূর্ণ বিনামূল্যে।</p>
                 <a href="https://raw.githubusercontent.com/saemon068/smart-app/refs/heads/main/UPDATE/Obiram%20TV.apk" class="cta-button" download>
                     <i class="fas fa-download"></i> এখুনি ডাউনলোড করুন
                 </a>
@@ -237,35 +275,76 @@
     </div>
 
     <main>
-        <!-- Features Section -->
-        <section id="features" class="features container">
-            <h2 class="gradient-text reveal">কেন অবিরাম টিভি অন্যদের চেয়ে আলাদা?</h2>
-            <div class="features-grid">
-                <div class="feature-card reveal" style="transition-delay: 0.1s;">
-                    <div class="icon"><i class="fas fa-satellite-dish"></i></div><h3>লাইভ স্ট্রিমিং</h3><p>বাফারিং ছাড়াই উপভোগ করুন আপনার প্রিয় সব টিভি চ্যানেল, সম্পূর্ণ লাইভ।</p>
-                </div>
+        <!-- UPDATED Features Section with App Core Features -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="gradient-text reveal">অ্যাপের অসাধারণ সব ফিচার</h2>
+                <p class="features-desc reveal">অবিরাম টিভি অ্যাপ তৈরি করা হয়েছে আপনার বিনোদনকে সহজ, সুন্দর এবং স্মার্ট করার জন্য। এক নজরে দেখে নিন আমাদের চমৎকার সব কোর (Core) ফিচার।</p>
                 
-                <div class="feature-card reveal" style="transition-delay: 0.3s;">
-                    <div class="icon"><i class="fas fa-star"></i></div><h3>এইচডি কোয়ালিটি</h3><p>ক্রিস্টাল ক্লিয়ার ছবি এবং সাউন্ড কোয়ালিটিতে সেরা অভিজ্ঞতা নিন।</p>
-                </div>
-                <div class="feature-card reveal" style="transition-delay: 0.4s;">
-                    <div class="icon"><i class="fas fa-bolt"></i></div><h3>দ্রুত ও সহজ</h3><p>আমাদের অ্যাপ অত্যন্ত দ্রুত এবং এর ইউজার ইন্টারফেস ব্যবহার করা খুবই সহজ।</p>
+                <div class="features-grid">
+                    <!-- Feature 1: Swipe to change -->
+                    <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                        <div class="icon"><i class="fas fa-arrows-alt-h"></i></div>
+                        <h3>সোয়াইপ কন্ট্রোল</h3>
+                        <p>ভিডিও প্লেয়ারে স্ক্রিনের ডানে বা বামে সোয়াইপ করেই খুব সহজে পরবর্তী বা আগের চ্যানেলে যেতে পারবেন।</p>
+                    </div>
+                    
+                    <!-- Feature 2: Numpad change -->
+                    <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                        <div class="icon"><i class="fas fa-keyboard"></i></div>
+                        <h3>নম্বর টাইপ করে চ্যানেল বদল</h3>
+                        <p>টিভির রিমোটের মতো স্ক্রিনে নম্বর টাইপ করে মুহূর্তেই আপনার পছন্দের কাঙ্ক্ষিত চ্যানেলে চলে যান।</p>
+                    </div>
+                    
+                    <!-- Feature 3: Remember Last Channel -->
+                    <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                        <div class="icon"><i class="fas fa-clock-rotate-left"></i></div>
+                        <h3>সর্বশেষ চ্যানেল অটো-প্লে</h3>
+                        <p>অ্যাপ থেকে বের হয়ে পুনরায় প্রবেশ করলে আপনার দেখা সর্বশেষ চ্যানেলটি স্বয়ংক্রিয়ভাবে চালু হবে (Resume Playback)।</p>
+                    </div>
+
+                    <!-- Feature 4: PiP -->
+                    <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                        <div class="icon"><i class="fas fa-clone"></i></div>
+                        <h3>পিকচার-ইন-পিকচার (PiP)</h3>
+                        <p>ফ্লোটিং উইন্ডো ফিচারের মাধ্যমে বন্ধুদের সাথে চ্যাটিং বা ব্রাউজিং করার পাশাপাশি ছোট স্ক্রিনে লাইভ টিভি দেখতে পারবেন।</p>
+                    </div>
+
+                    <!-- Feature 5: Favorites -->
+                    <div class="feature-card reveal" style="transition-delay: 0.5s;">
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        <h3>ফেভারিট চ্যানেল লিস্ট</h3>
+                        <p>আপনার সবচেয়ে প্রিয় চ্যানেলগুলো মার্ক করে রাখুন, যাতে পরবর্তীতে খোঁজাখুঁজি ছাড়াই এক ক্লিকে দেখা যায়।</p>
+                    </div>
+
+                    <!-- Feature 6: Fast Server & Free -->
+                    <div class="feature-card reveal" style="transition-delay: 0.6s;">
+                        <div class="icon"><i class="fas fa-bolt"></i></div>
+                        <h3>বাফার-মুক্ত সুপারফাস্ট স্ট্রিমিং</h3>
+                        <p>অত্যন্ত শক্তিশালী সার্ভারের মাধ্যমে কোনো মাসিক ফি বা সাবস্ক্রিপশন ছাড়াই ১০০+ চ্যানেল উপভোগ করুন একদম ফ্রিতে।</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- How it Works Section -->
         <section id="install" class="how-it-works container">
-            <h2 class="gradient-text reveal">শুরু করুন মাত্র ৩টি ধাপে</h2>
+            <h2 class="gradient-text reveal">ইন্সটল করবেন কীভাবে?</h2>
             <div class="steps-container">
                 <div class="step reveal" style="transition-delay: 0.1s;">
-                    <div class="step-number">১</div><h3>ডাউনলোড</h3><p>আমাদের ওয়েবসাইট থেকে নিরাপদ APK ফাইলটি ডাউনলোড করুন।</p>
+                    <div class="step-number"><i class="fas fa-download"></i></div>
+                    <h3>ধাপ ১: ডাউনলোড</h3>
+                    <p>নিচের বাটন থেকে নিরাপদ APK ফাইলটি আপনার মোবাইলে ডাউনলোড করুন।</p>
                 </div>
                 <div class="step reveal" style="transition-delay: 0.3s;">
-                    <div class="step-number">২</div><h3>পারমিশন</h3><p>ফোনের সেটিংসে গিয়ে 'Unknown Sources' থেকে ইন্সটলের অনুমতি দিন।</p>
+                    <div class="step-number"><i class="fas fa-cog"></i></div>
+                    <h3>ধাপ ২: পারমিশন</h3>
+                    <p>মোবাইলের সেটিংসে গিয়ে 'Unknown Sources' থেকে ইন্সটলের অনুমতি (Allow) দিন।</p>
                 </div>
                 <div class="step reveal" style="transition-delay: 0.5s;">
-                    <div class="step-number">৩</div><h3>উপভোগ</h3><p>অ্যাপটি ইন্সটল করুন এবং প্রবেশ করুন বিনোদনের অফুরন্ত জগতে।</p>
+                    <div class="step-number"><i class="fas fa-play"></i></div>
+                    <h3>ধাপ ৩: উপভোগ</h3>
+                    <p>ইন্সটল সম্পন্ন হলে অ্যাপটি ওপেন করুন এবং হারিয়ে যান বিনোদনের দুনিয়ায়।</p>
                 </div>
             </div>
         </section>
@@ -279,7 +358,7 @@
                 <h2 class="gradient-text">অ্যাপটির ভেতরের জগৎ</h2>
                 <div class="swiper swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- আপনার অ্যাপের ৩-৪টি সুন্দর স্ক্রিনশট এখানে দিন -->
+                        <!-- Screenshots -->
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-40-48-326_com.obiram.tv.jpg?raw=true" alt="App Screenshot 1"></div></div>
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-05-912_com.obiram.tv.jpg?raw=true" alt="App Screenshot 2"></div></div>
                         <div class="swiper-slide"><div class="screenshot-mockup"><img src="https://github.com/saemon068/smart-app/blob/main/UPDATE/Screenshot_2025-09-14-22-41-13-215_com.obiram.tv.jpg?raw=true" alt="App Screenshot 3"></div></div>
@@ -295,19 +374,23 @@
 
         <!-- FAQ Section -->
         <section id="faq" class="container">
-            <h2 class="gradient-text reveal">আপনার মনে প্রশ্ন আছে?</h2>
+            <h2 class="gradient-text reveal">সাধারণ প্রশ্নোত্তর (FAQ)</h2>
             <div class="faq-container reveal">
                 <details class="faq-item">
                     <summary>অবিরাম টিভি অ্যাপটি কি সম্পূর্ণ বিনামূল্যে?</summary>
-                    <div class="faq-content"><p>হ্যাঁ, আমাদের অ্যাপটি এবং এর সকল কন্টেন্ট উপভোগ করার জন্য কোনো টাকা লাগে না।</p></div>
+                    <div class="faq-content"><p>হ্যাঁ, আমাদের অ্যাপটি এবং এর ভেতরের সকল লাইভ টিভি চ্যানেল উপভোগ করার জন্য কোনো টাকা বা সাবস্ক্রিপশন চার্জ লাগে না।</p></div>
                 </details>
                 <details class="faq-item">
-                    <summary>এই অ্যাপটি ব্যবহার করা কি নিরাপদ?</summary>
-                    <div class="faq-content"><p>অবশ্যই। আমাদের অ্যাপটি ১০০% নিরাপদ এবং আপনার ব্যক্তিগত তথ্যের সুরক্ষা নিশ্চিত করে।</p></div>
+                    <summary>অ্যাপটি ব্যবহার করা কি নিরাপদ?</summary>
+                    <div class="faq-content"><p>অবশ্যই। আমাদের অ্যাপটি ১০০% নিরাপদ। এটি আপনার মোবাইল থেকে অপ্রয়োজনীয় কোনো পারমিশন বা ব্যক্তিগত তথ্য সংগ্রহ করে না।</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>লাইভ চ্যানেল দেখার সময় কি ইন্টারনেট বেশি কাটবে?</summary>
+                    <div class="faq-content"><p>না, অবিরাম টিভি অ্যাপে হাই-স্পিড অপ্টিমাইজড সার্ভার ব্যবহার করা হয়েছে, যা কম ডাটা খরচ করে বাফারিং ছাড়াই সেরা ভিডিও কোয়ালিটি প্রদান করে।</p></div>
                 </details>
                 <details class="faq-item">
                     <summary>অ্যাপটি কেন গুগল প্লে-স্টোরে নেই?</summary>
-                    <div class="faq-content"><p>কিছু নীতিমালার কারণে অ্যাপটি বর্তমানে প্লে-স্টোরে নেই। আপাতত, আমাদের অফিসিয়াল ওয়েবসাইটই ডাউনলোডের একমাত্র নিরাপদ উৎস।</p></div>
+                    <div class="faq-content"><p>থার্ড-পার্টি লাইভ স্ট্রিমিং চ্যানেল থাকার কারণে অ্যাপটি বর্তমানে প্লে-স্টোরে নেই। তবে আমাদের অফিসিয়াল ওয়েবসাইট থেকে ডাউনলোড করা সম্পূর্ণ নিরাপদ।</p></div>
                 </details>
             </div>
         </section>
@@ -316,16 +399,16 @@
         <section class="container reveal">
             <div class="final-cta">
                 <h2>আর অপেক্ষা কেন?</h2>
-                <p style="max-width: 600px; margin: 1rem auto 2rem;">আজই ডাউনলোড করুন অবিরাম টিভি এবং আপনার বিনোদনের অভিজ্ঞতাকে নিয়ে যান এক নতুন উচ্চতায়।</p>
+                <p style="max-width: 600px; margin: 1rem auto 2.5rem; font-size: 1.1rem; opacity: 0.9;">আজই অবিরাম টিভি ডাউনলোড করুন এবং আপনার স্মার্টফোনকে বানিয়ে ফেলুন একটি পোর্টেবল লাইভ টিভি!</p>
                 <a href="https://raw.githubusercontent.com/saemon068/smart-app/refs/heads/main/UPDATE/Obiram%20TV.apk" class="cta-button" download>
-                    <i class="fas fa-rocket"></i> লেটেস্ট APK ডাউনলোড করুন
+                    <i class="fas fa-rocket"></i> লেটেস্ট ভার্সন ডাউনলোড করুন
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer><p>&copy; ২০২৪ অবিরাম টিভি। সর্বস্বত্ব সংরক্ষিত।</p></footer>
+    <footer><p>&copy; ২০২৬ অবিরাম টিভি। সর্বস্বত্ব সংরক্ষিত।</p></footer>
 
     <!-- SwiperJS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -368,6 +451,10 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
         });
     </script>
     
@@ -378,15 +465,12 @@
         (function() {
             // এই ফাংশনটি ডেভেলপার টুলস সনাক্ত হলে সক্রিয় হবে
             const blockInspection = () => {
-                // একটি বার্তা দেখানোর জন্য পেজের কন্টেন্ট পরিবর্তন করুন
                 document.body.innerHTML = `
                     <div style="background-color: #000; color: #ff4d4d; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif;">
                         <h1 style="font-size: 3rem; margin-bottom: 20px;">ACCESS DENIED</h1>
                         <p style="font-size: 1.2rem;">This website is protected. Please close the developer tools.</p>
                     </div>
                 `;
-
-                // ক্রমাগত ডিবাগার চালু রেখে টুলস ফ্রিজ করে দিন
                 setInterval(() => {
                     debugger;
                 }, 50);
@@ -394,48 +478,23 @@
 
             // কীবোর্ড শর্টকাট ব্লক করুন
             document.addEventListener('keydown', (e) => {
-                // F12 key
-                if (e.key === "F12" || e.keyCode === 123) {
-                    e.preventDefault();
-                    blockInspection();
-                }
-                // Ctrl+Shift+I
-                if (e.ctrlKey && e.shiftKey && e.key === "I") {
-                    e.preventDefault();
-                    blockInspection();
-                }
-                // Ctrl+Shift+J
-                if (e.ctrlKey && e.shiftKey && e.key === "J") {
-                    e.preventDefault();
-                    blockInspection();
-                }
-                // Ctrl+U
-                if (e.ctrlKey && e.key === "U") {
-                    e.preventDefault();
-                    blockInspection();
-                }
+                if (e.key === "F12" || e.keyCode === 123) { e.preventDefault(); blockInspection(); }
+                if (e.ctrlKey && e.shiftKey && e.key === "I") { e.preventDefault(); blockInspection(); }
+                if (e.ctrlKey && e.shiftKey && e.key === "J") { e.preventDefault(); blockInspection(); }
+                if (e.ctrlKey && e.key === "U") { e.preventDefault(); blockInspection(); }
             });
 
             // ডান-ক্লিক নিষ্ক্রিয় করুন
-            document.addEventListener('contextmenu', (e) => {
-                e.preventDefault();
-            });
+            document.addEventListener('contextmenu', (e) => { e.preventDefault(); });
 
             // একটি নির্দিষ্ট সময় অন্তর ডেভেলপার টুলস খোলা আছে কিনা তা পরীক্ষা করুন
             const devToolsCheck = () => {
                 const threshold = 160;
-                // যদি উইন্ডোর বাইরের এবং ভেতরের প্রস্থ বা উচ্চতার মধ্যে পার্থক্য বেশি হয়, তার মানে টুলস খোলা
-                if (
-                    (window.outerWidth - window.innerWidth) > threshold ||
-                    (window.outerHeight - window.innerHeight) > threshold
-                ) {
+                if ((window.outerWidth - window.innerWidth) > threshold || (window.outerHeight - window.innerHeight) > threshold) {
                     blockInspection();
                 }
             };
-
-            // প্রতি ৫০০ মিলিসেকেন্ডে চেক করুন
             setInterval(devToolsCheck, 500);
-
         })();
     </script>
     <!-- ====================================================== -->
