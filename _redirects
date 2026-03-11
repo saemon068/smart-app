@@ -1,0 +1,13 @@
+# === Obiram TV Security Redirects ===
+# Redirect direct access to JS files to the homepage
+/player.js       /   301
+/playlist.js     /   301
+/sw.js           /   301
+
+# Redirect direct access to configuration files
+/manifest.json   /   301
+/robots.txt      /   301
+/sitemap.xml     /   301
+
+# Redirect direct access to HTML files (except index)
+/google5210ef0766c2313a.html    /   301
