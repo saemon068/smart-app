@@ -5,25 +5,43 @@
 
 
 
-#EXTINF:-1 tvg-id="58133" group-title="SONY LIV" tvg-logo="https://cdn.freelogovectors.net/wp-content/uploads/2021/12/sonyliv-logo-freelogovectors.net_-400x400.png",SONY LIV
-https://tv.roarzone.info/player.php?stream=edge2/star-sports-1
-
-#EXTINF:-1 tvg-id="58133" group-title="T Sport" tvg-logo="https://media.licdn.com/dms/image/v2/C560BAQEkzy6nAcsyag/company-logo_200_200/company-logo_200_200/0/1630662269264?e=2147483647&v=beta&t=Xyxc5WJFZRKGMmHUyjXuUmOmYGO9bgGLbkwV9uyduxo",T Sports
-https://tvsen7.aynascope.net/tsports-hd/index.m3u8?e=1771950836&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=04b583dd12cf21fd4757accae5d63fd2
-
-
-#EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://103.229.254.25:7001/play/a032/index.m3u8
-
-#EXTINF:-1 tvg-id="58133" group-title="CricHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",CricHD
-https://iptvtest068.emonsa4.workers.dev/?streamUrl=http://161.248.38.40:8000/play/a071/index.m3u8
-
-
-#EXTINF:-1 tvg-id="58133" group-title="xfireflix" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",xfireflix
-https://ottbangla-by-xfireflix.pages.dev/playlist.m3u
-
-
-
-#EXTINF:-1 tvg-id="58133" group-title="AYNA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/SonyLIV_2020.png",AYNA
-https://raw.githubusercontent.com/abusaeeidx/Ayna-Playlists-free-Version/refs/heads/main/playlist.m3u
-
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Sony%20Ten%2011730721777.png" group-title="Uncategorized",Sony Ten 1
+http://stvlive.net:8080/sonyten1/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Sony%20Ten%2021731408024.png" group-title="Uncategorized",Sony Ten 2
+http://103.175.242.10:8080/sonyten2/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Sony%20Ten%2031730721897.png" group-title="Uncategorized",Sony Ten 3
+http://103.175.242.10:8080/sonyten3/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Sony%20Ten%2051731408219.png" group-title="Uncategorized",Sony Ten 5
+http://103.175.242.10:8080/sonyten5/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Gold1731407227.png" group-title="Uncategorized",Star Gold
+http://103.175.242.10:8080/stargold/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Gold21731407524.png" group-title="Uncategorized",Star Gold2
+http://103.175.242.10:8080/stargold2/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Jalsha1732256743.png" group-title="Uncategorized",Star Jalsha
+http://103.175.242.10:8080/starjalsha/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Movies1731469513.png" group-title="Uncategorized",Star Movies
+http://103.175.242.10:8080/starmovies/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Plus1731424615.png" group-title="Uncategorized",Star Plus
+http://103.175.242.10:8080/starplus/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Select11731408156.png" group-title="Uncategorized",Star Select1
+http://103.175.242.10:8080/starselect1/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Select21731408458.png" group-title="Uncategorized",Star Select2
+http://103.175.242.10:8080/starselect2/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Sports%2011732941309.png" group-title="Uncategorized",Star Sports 1
+http://103.175.242.10:8080/starsports1/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Star%20Sports21731408535.png" group-title="Uncategorized",Star Sports2
+http://103.175.242.10:8080/starsports2/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Sun%20Bangla1664976074.png" group-title="Uncategorized",Sun Bangla
+http://103.175.242.10:8080/sunbangla/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Tsports1735735587.png" group-title="Uncategorized",Tsports
+http://103.175.242.10:8080/tsports1/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Tsports1735735598.png" group-title="Uncategorized",Tsports
+http://103.175.242.10:8080/tsports2/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Zee%20Bangla1731406932.png" group-title="Uncategorized",Zee Bangla
+http://103.175.242.10:8080/zeebangla/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Zee%20Bangla%20Cinema1731470057.png" group-title="Uncategorized",Zee Bangla Cinema
+http://103.175.242.10:8080/zeebncinema/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Zee%20Bangla%20HD1736674908.png" group-title="Uncategorized",Zee Bangla HD
+http://103.175.242.10:8080/zeebnhd/index.m3u8
+#EXTINF:-1 tvg-logo="http://103.175.242.10/assets/images/Zee%20Cinema1731407656.png" group-title="Uncategorized",Zee Cinema
+http://103.175.242.10:8080/zeecinema/index.m3u8
