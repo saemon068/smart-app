@@ -87,6 +87,8 @@
             border: none;
             background-size: 200% 200%;
             animation: gradient-flow 8s ease infinite;
+            position: relative;
+             z-index: 99; 
         }
         .cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 12px 35px rgba(0, 114, 255, 0.4); color: #fff;}
 
@@ -99,7 +101,12 @@
             align-items: center;
         }
         .hero-container { display: flex; align-items: center; gap: 3rem; width: 100%; max-width: 1140px; margin: 0 auto; }
-        .hero-text { flex: 1; text-align: left; }
+        .hero-text { 
+    flex: 1; 
+    text-align: left; 
+    position: relative; 
+    z-index: 10; 
+}
         .hero-text .subtitle { font-size: 1.2rem; margin: 1.5rem 0 2.5rem; color: var(--gray-text); }
         .hero-image { flex: 1; display: flex; justify-content: center; }
         .floating-phone {
