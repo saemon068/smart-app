@@ -1,8 +1,8 @@
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-ALLOW-CACHE:YES
 
-#EXTINF:-1, T Sports HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-#EXTHTTP:{"cookie":"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+#EXT-X-TARGETDURATION:10
+
+#EXTINF:-1, Channel Name 1
+https://mumt04.tangotv.in/B4UMUSIC/index.m3u8
+
+#EXTINF:-1, Channel Name 2
 https://mumt04.tangotv.in/B4UMUSIC/index.m3u8
