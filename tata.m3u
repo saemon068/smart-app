@@ -1,145 +1,7 @@
-#EXTM3U
 
-#EXTINF:0 tvg-logo="https://i.imgur.com/H9qgGSc.png" group-title="Bangla",BTV News
-http://ms.towkai.com/BTVNewsHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/RR0Iv6V.png" group-title="Bangla",BTV World
-http://ms.towkai.com/BtvNational/index.m3u8
-
-#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/15/Sangsad_Television_Logo.jpg" group-title="Bangla",Songsad TV
-http://100.64.64.11/sangshad/index.m3u8
-
-#EXTINF:0 group-title="Islamic",Islamic TV
-https://stream.ottplus.bd/live/islamic_tv/index.m3u8
-
-#EXTINF:0 group-title="Bangla",Gtv HD
-http://ms.towkai.com/gazi_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/CJUmEHD.png" group-title="Bangla",T Sports HD
-http://ms.towkai.com/T_SportsFHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/7ftu2Rt.jpg" group-title="Bangla",Maasranga
-http://ms.towkai.com/maasranga/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/PK9Gm5g.png" group-title="Bangla",Duronto TV
-http://ms.towkai.com/DurontoHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/4imblNY.jpg" group-title="Bangla",Mohona
-http://ms.towkai.com/MOHONA/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/fxq0pV2.png" group-title="Bangla",Asian TV
-http://ms.towkai.com/asiantv_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/5PsRkPd.png" group-title="Bangla",ATN Bangla
-http://ms.towkai.com/atnbangla_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/HX8SSDA.png" group-title="Bangla",Banglavision TV
-http://ms.towkai.com/banglavision_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/pTJSGtj.png" group-title="Bangla",Boishakhi TV
-http://ms.towkai.com/boishakhi_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/fj8nxOw.png" group-title="Bangla",Channel 9 HD
-http://ms.towkai.com/channel9_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/p0I5dr0.png" group-title="Bangla",Channel I
-http://ms.towkai.com/ChanneliHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/tPZKfLr.png" group-title="Bangla",Deepto TV
-http://ms.towkai.com/DeeptoHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/JgkIH3w.png" group-title="Bangla",Desh TV
-http://ms.towkai.com/DeshSD/index.m3u8
-
-#EXTINF:0 group-title="Bangla",Nexus TV
-http://ms.towkai.com/NexustvHD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/v9PqrCG.png" group-title="News",ATN News
-http://ms.towkai.com/atnnews_ml/index.m3u8
-
-#EXTINF:0 group-title="News", Channel 1 HD
-https://stream.ottplus.live/live/channel_1_hd_abr/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/i8T9qQs.png" group-title="News",Ekattor TV
-http://ms.towkai.com/EkattorHD/index.m3u8
-
-#EXTINF:0 group-title="News",Ekhon TV
-http://ms.towkai.com/EkhonHD/tracks-v1a1/mono.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/ds3aThu.jpg" group-title="Bangla",Jamuna Tv
-http://ms.towkai.com/Jamuna_SD/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/kviJN1i.png" group-title="News",Independent TV
-http://ms.towkai.com/itv_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/Z2QvpTn.png" group-title="News",Somoy News
-http://ms.towkai.com/somoytv/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/FxsW4XI.png" group-title="News",News 24
-http://ms.towkai.com/News24HD/index.m3u8
-
-#EXTINF:0 group-title="Bangla",DBC News
-http://ms.towkai.com/dbcnews_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/MmhxR5E.png" group-title="Bangla",Channel 24
-http://ms.towkai.com/channel24_ml/index.m3u8
-
-#EXTINF:0 group-title="Bangla",Jagonews 24
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jagonews24.stream/playlist.m3u8
-
-#EXTINF:0 group-title="Bangla",Green TV
-http://ms.towkai.com/GreenTV/index.m3u8
-
-#EXTINF:0 group-title="Bangla",Global Tv
-http://ms.towkai.com/globaltv/index.m3u8
-
-#EXTINF:0 group-title="Bangla",Ayna TV
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ayna.stream/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/kFqOMtx.png" group-title="Bangla",Ekushey ETV
-http://ms.towkai.com/Ekusheytv/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/3usnOla.png" group-title="Bangla",NTV
-http://ms.towkai.com/ntvsd/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/yi5p51T.png" group-title="Bangla",RTV
-http://ms.towkai.com/rtvhd/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/fraEjzm.png" group-title="Bangla",SA TV HD
-http://ms.towkai.com/satv/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/K43LsMQ.png" group-title="Bangla",Bangla TV HD
-http://ms.towkai.com/banglatv/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/kDmkexe.png" group-title="Bangla",Bijoy Tv
-http://ms.towkai.com/bijoy_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/bahWhBG.png" group-title="Bangla",MyTV
-http://ms.towkai.com/mytv/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/h5FhOWT.png" group-title="Bangla",Ananda TV
-http://ms.towkai.com/anandatv_ml/index.m3u8
-
-#EXTINF:-1 group-title="-",Channel S
-http://ms.towkai.com/channels_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/IYGU8Km.png" group-title="Movies",Movie Bangla
-http://alvetv.com/moviebanglatv/8080/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/9d1xXjN.png" group-title="Drama",Star Jalsha HD
-http://ms.towkai.com/starjalsha_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/e5Ldh7e.png" group-title="Drama",Zee Bangla HD
-http://ms.towkai.com/zeebangla_ml/index.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/e5Ldh7e.png" group-title="Drama",Akash AATH
-http://ms.towkai.com/aakash_ml/index.m3u8
 
 #EXTINF:0 tvg-logo="https://i.imgur.com/HVZHZGl.png" group-title="Drama",Colors Bangla HD
 http://103.165.93.31:8095/colorsBangla/tracks-v1a1/mono.m3u8
-
-#EXTINF:0 tvg-logo="https://i.imgur.com/2PQfcOh.png" group-title="Movies",Jalsha Movies HD
-http://ms.towkai.com/jalshamovies_ml/index.m3u8
 
 #EXTINF:0 group-title="Drama",Colors Bangla Cinema
 http://103.165.93.31:8095/colorsBanglaChinema/tracks-v1a1/mono.m3u8
@@ -150,143 +12,29 @@ http://103.165.93.31:8095/enter10Bangla/tracks-v1a1/mono.m3u8
 #EXTINF:0 group-title="Drama",Sony AATH
 http://103.165.93.31:8095/sonyAath/tracks-v1a1/mono.m3u8
 
-#EXTINF:0 group-title="Drama",Sony AATH (Backup)
-https://stream.ottplus.bd/live/sony_aath_abr/index.m3u8
 
-#EXTINF:0 group-title="Drama",Sony TV
-https://stream.ottplus.live/live/sony_ent_sd_abr/index.m3u8
-
-#EXTINF:0 group-title="Drama",Sony HD
-https://stream.ottplus.live/live/sony_ent_hd_abr/index.m3u8
 
 #EXTINF:-1 group-title="Kids",Nick
 http://103.165.93.31:8095/nick/index.m3u8
 
-#EXTINF:-1 group-title="Kids",Nick Jr
-http://ms.towkai.com/nickjunior_ml/index.m3u8
 
 #EXTINF:-1 group-title="Kids",Sonic
 http://103.165.93.31:8095/sonic/index.m3u8
 
-#EXTINF:-1 group-title="Kids",Tom & Jarry
-https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8
-
-#EXTINF:0 group-title="Kids",Doreamon
-https://live20.bozztv.com/giatvplayout7/giatv-209902/index.m3u8
-
-#EXTINF:0 group-title="Kids",Disney HD
-https://rgkkw.live:443/live/1Aoen7elp5/IgMJ60tmAa/19741.ts
-
-#EXTINF:0 group-title="Kids",Disney jr
-http://ms.towkai.com/disneyjr_ml/index.m3u8
-
-#EXTINF:0 group-title="Kids",Hungama
-http://ms.towkai.com/hungama_ml/index.m3u8
-
-#EXTINF:0 group-title="Kids",Super Hungama
-https://stream.ottplus.live/live/sony_yay_abr/index.m3u8
-
-#EXTINF:0 group-title="Kids",Cartoon Network
-https://stream.ottplus.live/live/cn_sd_abr/index.m3u8
-
-#EXTINF:0 group-title="Kids",Cartoon Network Backup
-https://s3.ideationtec.live/Cartoon_Network/Cartoon_Network.m3u8
-
-#EXTINF:0 group-title="Kids",Cartoon Network HD+
-http://ms.towkai.com/cn_ml/index.m3u8
-
-#EXTINF:0 group-title="Kids",Pogo
-http://ms.towkai.com/pogo_ml/index.m3u8
-
 #EXTINF:0 group-title="Documentary",Discovery
 http://103.165.93.31:8095/discovery/tracks-v1a1/mono.m3u8
-
-#EXTINF:0 group-title="Documentary",Discovery HD
-http://ms.towkai.com/discovery_mimelive/index.m3u8
-
-#EXTINF:0 group-title="Documentary",Discovery Science
-http://ms.towkai.com/discoveryscience_mimelive/index.m3u8
-
-#EXTINF:-1 group-title="-",Investigation Discovery
-https://stream.ottplus.live/live/id_hd_abr/index.m3u8
-
-#EXTINF:0 group-title="Documentary",National Geographic HD
-http://ms.towkai.com/national_geographic_channel/index.m3u8
-
-#EXTINF:0 group-title="Documentary",NatGeo Wild HD
-http://ms.towkai.com/natgeowild_mimelive/index.m3u8
-
-#EXTINF:0 group-title="Documentary",Animal Planet HD
-http://ms.towkai.com/ap_mimelive/index.m3u8
-
-#EXTINF:0 group-title="Documentary",Travel XP HD
-http://ms.towkai.com/travelxp_ml/index.m3u8
-
-#EXTINF:0 group-title="Documentary",Sony BBC Earth HD
-https://stream.ottplus.live/live/bbc_earth_hd_abr/index.m3u8
-
-#EXTINF:0 group-title="Documentary",TLC HD
-http://ms.towkai.com/tlc_ml/index.m3u8
-
-#EXTINF:-1 group-title="-",History TV18 HD
-http://ms.towkai.com/historytv_mimelive/index.m3u8
-
-#EXTINF:0 group-title="Movies",Sony Max
-https://stream.ottplus.bd/live/max_sd_abr/index.m3u8
-
-#EXTINF:0 group-title="Movies",Sony Max HD
-https://stream.ottplus.bd/live/max_hd_abr/index.m3u8
-
-#EXTINF:0 group-title="Movies",Sony Max 2
-https://stream.ottplus.bd/live/max_2_abr/index.m3u8
 
 #EXTINF:0 group-title="Movies",Sony Wah
 http://103.180.212.191:3500/live/1393.m3u8
 
-#EXTINF:0 group-title="Movies",&Picture HD
-http://ms.towkai.com/andpictures_ml/index.m3u8
-
 #EXTINF:0 group-title="Movies",Colors Cineplex HD
 http://66.102.126.10:8000/play/a076/index.m3u8
 
-#EXTINF:0 group-title="Movies",Zee Cinema HD
-http://ms.towkai.com/zeecinema_ml/index.m3u8
-
-#EXTINF:0 group-title="Movies",Zee Action
-https://stream.ottplus.live/live/zee_action_abr/index.m3u8
-
-#EXTINF:0 group-title="Movies",Zee Bollywood
-https://stream.ottplus.bd/live/zee_bollywood_abr/index.m3u8
-
-#EXTINF:0 group-title="Movies",Star Gold HD
-http://ms.towkai.com/stargold_ml/index.m3u8
-
-#EXTINF:-1 group-title="-",Star Gold 2 HD
-http://ms.towkai.com/stargold2_ml/index.m3u8
-
-#EXTINF:-1 group-title="-",Star Gold Select HD
-http://ms.towkai.com/star_gold_select/index.m3u8
-
-#EXTINF:-1 group-title="LTWS HINDI MOVIES",GOLDMINES
-https://cdn-2.pishow.tv/live/1459/master.m3u8
 
 #EXTINF:-1 group-title="LTWS HINDI MOVIES",Goldmines 2
 http://103.175.73.12:8080/live/46/46_0.m3u8
 
-#EXTINF:-1 group-title="LTWS HINDI MOVIES",GOLDMINES MOVIES
-https://cdn-2.pishow.tv/live/1461/master.m3u8
 
 #EXTINF:-1 group-title="LTWS HINDI MOVIES",Goldmines Action
 http://103.175.73.12:8080/live/584/584_0.m3u8
 
-#EXTINF:-1 group-title="LTWS HINDI MOVIES",B4U KADAK
-https://cdn-2.pishow.tv/live/227/master.m3u8
-
-#EXTINF:-1 group-title="LTWS HINDI MOVIES",B4U MOVIES
-http://ms.towkai.com/b4umovies_ml/index.m3u8
-
-#EXTINF:0 group-title="Movies",Sony Pix HD
-http://ms.towkai.com/sonypix_ml/index.m3u8
-
-#EXTINF:-1 group-title="-",STAR Movies Select HD
-http://ms.towkai.com/star_movies_select/index.m3u8
