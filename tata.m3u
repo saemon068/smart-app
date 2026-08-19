@@ -50,3 +50,21 @@ http://103.165.93.31:8095/sonyAath/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/AsimDipto/Logo-box/refs/heads/main/India/sangeet-bangla-in.png" group-title="Indian Bangla",Sangeet Bangla
 http://103.165.93.31:8095/sangeetBangla/index.m3u8
+
+
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/F1t6r1gv/20240823_023247.png",Colors HD 
+http://202.70.146.135:8000/play/a00b/index.m3u8
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/Tw3MFyQH/20240823_022713.png",Colors Cineplex
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/8k3QXzvt/20240823_022853.png",Star Plus HD
+http://202.70.146.135:8000/play/a009/index.m3u8
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/Gmn0rgqD/20240823-022945.png",Star Bharat 
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/6pCXvxyz/20240823_022553.png",Star Gold HD 
+http://66.102.126.10:8000/play/a00f/index.m3u8
+
+#EXTINF:-1 group-title="𝐈𝐧𝐝𝐢𝐚𝐧 𝐇𝐢𝐧𝐝𝐢" tvg-logo="https://i.postimg.cc/bYKYDTmy/20240823_023330.png",Star Gold Selected 
+http://66.102.126.10:8000/play/a01s/index.m3u8
