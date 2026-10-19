@@ -1,0 +1,31 @@
+name: Auto News Update & Facebook Auto Poster
+
+on:
+  schedule:
+    # প্রতি ১ ঘণ্টা পর পর স্বয়ংক্রিয়ভাবে চলবে
+    - cron: '0 */1 * * *'
+  workflow_dispatch: # গিটহাব থেকে ম্যানুয়ালি যেকোনো সময় রান করার জন্য
+
+jobs:
+  auto-news-and-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Trigger Auto News Fetch & Facebook Post
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          WEBSITE_URL: "https://obiramnews.infy.click"
+          CRON_SECRET: "obiram_cron_secure_key"
+        run: |
+          echo "Starting Obiram News Auto Update..."
+          # লাইভ ওয়েবসাইটের অটো-ফেচ ও ফেসবুক পোস্ট স্ক্রিপ্ট ট্রিগার করা
+          curl -s -L "${WEBSITE_URL}/auto_fetch_news.php?secret_key=${CRON_SECRET}" || true
+          echo "Completed auto news process."
